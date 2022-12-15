@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.org.njproject.smiter.api.dao.GroupDAO;
 import com.org.njproject.smiter.api.model.Group;
 import com.org.njproject.smiter.api.service.GroupService;
-import com.org.njproject.smiter.app.model.GroupImpl;
 
 @Service
 public class GroupServiceImpl implements GroupService {

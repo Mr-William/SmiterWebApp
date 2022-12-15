@@ -2,26 +2,22 @@ package com.org.njproject.smiter.api.service;
 
 import java.util.List;
 
-import com.org.njproject.smiter.app.model.GroupUser;
+import com.org.njproject.smiter.api.model.GroupUser;
 
 
 
 public interface GroupUserService {
-	
-	GroupUser findById(long id);
-	
-	GroupUser findByName(String name);
-	
-	void saveUser(GroupUser user);
-	
-	void updateUser(GroupUser user);
-	
-	void deleteUserById(long id);
 
-	List<GroupUser> findAllUsers(); 
-	
-	void deleteAllUsers();
-	
-	public boolean isUserExist(GroupUser user);
+	GroupUser findGroupUserById(Long id);
+
+	void saveGroupUser(GroupUser user);
+
+	void updateGroupUser(GroupUser user);
+
+	void deleteGroupUser(Long id);
+
+	List<GroupUser> listGroupUsers();
+
+	Boolean userExists(String username);
 	
 }
