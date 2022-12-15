@@ -14,4 +14,5 @@ public interface UserDAO {
 	boolean removeUser(Long userId);
 	String validLogin(Login login);
 	User findUserByUserName(String userName);
+	void populateUsers();
 }

@@ -624,3 +624,11 @@ body{
   padding-top:auto;
   padding-bottom:auto;
 }
+.datepicker{	
+  width:100%;
+  float:center;
+  display:block;  
+  padding-top:auto;
+  padding-bottom:auto;
+  color:purple;
+}

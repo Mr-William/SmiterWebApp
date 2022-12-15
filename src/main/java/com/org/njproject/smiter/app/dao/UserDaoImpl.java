@@ -14,21 +14,23 @@ import com.org.njproject.smiter.app.model.UserImpl;
 @Repository
 public class UserDaoImpl implements UserDAO{
 	
-	private static Long userId = (long) 0;
+	private static Long userId = (long) 1;
 	private static List<UserImpl> users = new ArrayList<>();
+	private static User admin;
 	
-	private static List<UserImpl> populateUsers(){
-		UserImpl user = new UserImpl();
-		user.setCompany("");
-		user.setEmail("");
-		user.setId(++userId);
-		user.setName("");
-		user.setPassword("");
-		user.setUserName("");
-		user.setUserType("");
-		
-		users.add(user);
-		return users;
+	private static void initList() {
+		admin = new UserImpl();
+		admin.setCompany("Home");
+		admin.setEmail("w.g@g.com");
+		admin.setId(userId);
+		admin.setName("William");
+		admin.setPassword("asdf");
+		admin.setUserName("will");
+		admin.setUserType("Owner");
+		users.add((UserImpl) admin);
+	}
+	public void populateUsers(){
+		initList();
 	}
 
 	@Override

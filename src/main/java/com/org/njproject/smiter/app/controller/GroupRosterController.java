@@ -15,17 +15,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.org.njproject.smiter.api.service.GroupService;
+import com.org.njproject.smiter.api.model.GroupUser;
 import com.org.njproject.smiter.api.service.GroupUserService;
-import com.org.njproject.smiter.app.model.GroupUser;
 
 @RestController
 public class GroupRosterController {
  
     @Autowired
     GroupUserService userService;
-    @Autowired
-    GroupService groupService;
     
     HttpHeaders responseHeaders = new HttpHeaders();
     
@@ -37,7 +34,7 @@ public class GroupRosterController {
     public ResponseEntity<List<GroupUser>> listAllUsers() {
     	
     	setHeaders();
-        List<GroupUser> users = userService.findAllUsers();
+        List<GroupUser> users = userService.listGroupUsers();
         if(users.isEmpty()){
             return new ResponseEntity<List<GroupUser>>(responseHeaders, HttpStatus.NO_CONTENT);
         }
@@ -48,7 +45,7 @@ public class GroupRosterController {
     public ResponseEntity<GroupUser> getUser(@PathVariable("id") long id) {
     	
     	setHeaders();
-        GroupUser user = userService.findById(id);
+        GroupUser user = userService.findGroupUserById(id);
         if (user == null) {
             System.out.println("User with id " + id + " not found");
             return new ResponseEntity<GroupUser>(responseHeaders, HttpStatus.NOT_FOUND);
@@ -58,15 +55,15 @@ public class GroupRosterController {
     
     @RequestMapping(value = "/editusers/", method = RequestMethod.POST)
     public ResponseEntity<Void> createUser(@RequestBody GroupUser user,    UriComponentsBuilder ucBuilder) {
-
+    	System.out.println("======UserID:" + user.getId() + " ==========");
     	setHeaders();
-        if (userService.isUserExist(user)) {
+        if (userService.userExists(user.getUsername())) {
             System.out.println("A User with name " + user.getUsername() + " already exists");
             return new ResponseEntity<Void>(responseHeaders, HttpStatus.CONFLICT);
         }
- 
-        userService.saveUser(user);
- 
+        System.out.println("======UserID:" + user.getId() + " ==========");
+        
+        userService.saveGroupUser(user);
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(ucBuilder.path("/user/{id}").buildAndExpand(user.getId()).toUri());
         headers.add("loggedIn", "true");
@@ -74,33 +71,36 @@ public class GroupRosterController {
     }
      
     @RequestMapping(value = "/editusers/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<GroupUser> updateUser(@PathVariable("id") long id, @RequestBody GroupUser user) {
+    public ResponseEntity<GroupUser> updateUser(@RequestBody GroupUser user) {
          
     	setHeaders();
-        GroupUser currentUser = userService.findById(id);
+    	GroupUser currentUser = userService.findGroupUserById(user.getId());
          
         if (currentUser==null) {
-            System.out.println("User with id " + id + " not found");
+            System.out.println("User with id " + user.getId() + " not found");
             return new ResponseEntity<GroupUser>(responseHeaders, HttpStatus.NOT_FOUND);
+        }if (userService.userExists(user.getUsername())) {
+            System.out.println("A User with name " + user.getUsername() + " already exists");
+            return new ResponseEntity<>(responseHeaders, HttpStatus.CONFLICT);
         }
  
         currentUser.setUsername(user.getUsername());
         currentUser.setEmail(user.getEmail());
          
-        userService.updateUser(currentUser);
+        userService.updateGroupUser(currentUser);
         return new ResponseEntity<GroupUser>(currentUser, responseHeaders, HttpStatus.OK);
     }
      
     @DeleteMapping(value = "/editusers/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable String id) {
  
-        GroupUser user = userService.findById(Long.valueOf(id));
+    	GroupUser user = userService.findGroupUserById(Long.valueOf(id));
         if (user == null) {
             System.out.println(" User with id " + id + " not found");
             return new ResponseEntity<>(responseHeaders, HttpStatus.NOT_FOUND);
         }
  
-        userService.deleteUserById(Long.valueOf(id));
+        userService.deleteGroupUser(Long.valueOf(id));
         return new ResponseEntity<>(responseHeaders, HttpStatus.OK);
     }
  
