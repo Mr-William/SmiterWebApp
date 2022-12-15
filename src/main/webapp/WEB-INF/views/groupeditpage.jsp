@@ -51,6 +51,15 @@
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label class="blk-desc" for="user_email">User Birthday:</label>
+                                <div class="col-md-7">
+                                    <input type="date" ng-model="ctrl.user.dob" id="user_dob" class="datepicker" required placeholder="Select the users birthday." />
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="row">
                             <div class="form-actions floatRight">
@@ -72,21 +81,22 @@
                     <table class="table table-dark table-striped text-light">
                         <thead>
                             <tr>
-                            	<th>User ID</th>
                                 <th>User Name</th>
                                 <th>User Email</th>
-                                <th width="20%"></th>
+                                <th>User Birthday</th>
+                               	<th>ID </th>
                                 <th width="20%"></th>
                                 <th width="20%"></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr ng-repeat="currentUser in ctrl.users">
-                            	<td><span ng-bind="currentUser.id"></span></td>
                                 <td><span ng-bind="currentUser.username"></span></td>
                                 <td><span ng-bind="currentUser.email"></span></td>
+                                <td><span ng-bind="currentUser.dob | date:'MM/dd/yyyy' "></span></td>
+                                <td><span ng-bind="currentUser.id"></span></td>
                                 <td></td>
-                                <!-- <td><button data-ng-click="ctrl.updateUser(currentUser)" class="btn btn-secondary btn-sm">Update</button></td> -->
+                                <td><button data-ng-click="ctrl.edit(currentUser.id)" class="btn btn-secondary btn-sm">Select</button></td>
                                 <td><button data-ng-click="ctrl.remove(currentUser.id)" class="btn btn-secondary btn-sm">Delete</button></td>
                             </tr>
                         </tbody>

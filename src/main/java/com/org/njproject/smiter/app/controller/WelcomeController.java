@@ -6,9 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
-import com.org.njproject.smiter.api.model.Login;
+import com.org.njproject.smiter.api.dao.UserDAO;
 import com.org.njproject.smiter.api.service.LoginService;
 import com.org.njproject.smiter.app.model.LoginImpl;
 import com.org.njproject.smiter.app.model.UserImpl;
@@ -19,11 +18,14 @@ import com.org.njproject.smiter.app.model.UserImpl;
 public class WelcomeController{
 	
 	@Autowired
+	private UserDAO init;
+	@Autowired
 	private LoginService loggedIn;
 	boolean active;
 	
 	@GetMapping("/")
 	public String welcome(Model model) {
+		init.populateUsers();
 		active  = loggedIn.isLoggedIn();
 		
 		model.addAttribute("message", "Welcome to Smiter!");

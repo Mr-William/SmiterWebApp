@@ -3,7 +3,6 @@ package com.org.njproject.smiter.api.dao;
 import java.util.List;
 
 import com.org.njproject.smiter.api.model.Group;
-import com.org.njproject.smiter.app.model.GroupImpl;
 
 public interface GroupDAO {
 	
@@ -13,3 +12,4 @@ public interface GroupDAO {
 	boolean deleteGroup(Long id);
 	Group findGroupsByName(String name);
 }
+ 

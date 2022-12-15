@@ -5,7 +5,8 @@ angular.module('SmiterApp').controller('UserController', ['$scope', 'UserService
     self.user = {
 		id:null,
 		username:'',
-		email:''
+		email:'',
+		dob:''
 		};
     
     self.users = [];
@@ -39,14 +40,23 @@ angular.module('SmiterApp').controller('UserController', ['$scope', 'UserService
 			
             function(errResponse){
 				clrMsg();
-                self.error = 'That username already exists!';
+                self.error = errResponse;
                 reset();
             }
         );
     }
 
     function updateUser(userSelected){
+		self.message = 'User ' + userSelected.username + ' successfully updated!'
 		self.user = angular.copy(userSelected);
+		UserService.updateUser(userSelected, self.user.id).then(
+			fetchAllUsers,
+			function(errResponse){
+				clrMsg();
+                self.error = errResponse;
+                reset();				
+			}
+			);
 	}
 
     function deleteUser(id){
@@ -66,7 +76,7 @@ angular.module('SmiterApp').controller('UserController', ['$scope', 'UserService
     function submit() {
 		clrMsg();
         if(self.user.id===null){
-            console.log('Saving New User', self.user);
+            console.log('Saving New User with id: ' + self.user.id, self.user);
             createUser(self.user);
         }else{
             updateUser(self.user, self.user.id);
