@@ -37,6 +37,6 @@ public class SmiterAppInitializer extends AbstractAnnotationConfigDispatcherServ
 		super.onStartup(servletContext);
 		ServletRegistration.Dynamic servlet = servletContext.addServlet("h2-console", new WebServlet());
 		servlet.setLoadOnStartup(2);
-		servlet.addMapping("/console/*");
+		servlet.addMapping("/db/*");
 	}
 }

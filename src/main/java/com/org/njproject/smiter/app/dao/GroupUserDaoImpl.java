@@ -57,8 +57,10 @@ public class GroupUserDaoImpl implements GroupUserDAO{
 
 	@Override
 	public void deleteGroupUser(Long id) {
-		GroupUser user = getSession().byId(GroupUser.class).load(id);
-		getSession().delete(user);
+		String queryStr = "DELETE FROM userGroup WHERE ID = :id";
+		Query q = getSession().createQuery(queryStr);
+		q.setParameter("id", id);
+		q.executeUpdate();
 	}
 	
 	@Override

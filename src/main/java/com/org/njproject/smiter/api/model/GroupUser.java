@@ -11,7 +11,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-@Entity 
+@Entity(name="userGroup") 
 @Table(name="usergroup")
 public class GroupUser{
 
