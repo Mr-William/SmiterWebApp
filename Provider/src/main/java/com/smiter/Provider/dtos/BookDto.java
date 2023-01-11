@@ -11,9 +11,9 @@ import lombok.Setter;
 @Data
 public class BookDto {
     
-    private Long id;
-    private String title;
-    private String author;
-    private String genre;
-    private LocalDate datecompleted;
+    Long id;
+    String title;
+    String author;
+    String genre;
+    LocalDate datecompleted;
 }

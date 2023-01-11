@@ -50,7 +50,6 @@ public class GameController {
 
     @PostMapping("/new")
     public ResponseEntity<Game> saveGame(@RequestBody GameDto game){
-        System.out.println("Game Title:" + game.getTitle());
         Game ret = gameService.addGame(game);
         return new ResponseEntity<Game>(ret, HttpStatus.OK);
     }

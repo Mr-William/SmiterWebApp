@@ -50,7 +50,6 @@ public class MovieController {
 
     @PostMapping("/new")
     public ResponseEntity<Movie> saveMovie(@RequestBody MovieDto movie){
-        System.out.println("Movie Title:" + movie.getTitle());
         Movie ret = movieService.addMovie(movie);
         return new ResponseEntity<Movie>(ret, HttpStatus.OK);
     }

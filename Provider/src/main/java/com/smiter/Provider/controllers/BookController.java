@@ -50,7 +50,6 @@ public class BookController {
 
     @PostMapping("/new")
     public ResponseEntity<Book> saveBook(@RequestBody BookDto book){
-        System.out.println("Book Title:" + book.getTitle());
         Book ret = bookService.addBook(book);
         return new ResponseEntity<Book>(ret, HttpStatus.OK);
     }
