@@ -1,0 +1,11 @@
+INSERT INTO BOOKS(BOOK_ID, BOOK_TITLE, BOOK_AUTHOR, BOOK_GENRE, DATE_COMPLETED)
+    VALUES(0, 'War and Peace', 'Leo Tolstoy', 'Historical Fiction', DATE '2022-12-12');
+
+INSERT INTO GAMES(GAME_ID, GAME_TITLE, GAME_GENRE, DATE_COMPLETED)
+    VALUES(0, 'World of Warcraft', 'MMORPG', DATE '2023-01-04');
+
+INSERT INTO MOVIES(MOVIE_ID, MOVIE_TITLE, MOVIE_GENRE, MOVIE_PRODUCER, MOVIE_DIRECTOR)
+    VALUES(0, 'Super Troopers', 'Comedy', 'Jay Chandrasekhar', 'Jay Chandrasekhar');
+
+INSERT INTO MUSIC(MUSIC_ID, SONG_TITLE, ALBUM_TITLE, SONG_ARTIST, SONG_GENRE)
+    VALUES(0, 'Piano Sonata 14', '', 'Ludwig van Beethoven', 'Classical');
