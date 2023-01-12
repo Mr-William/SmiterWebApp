@@ -49,12 +49,12 @@ public class MusicController {
     }
 
     @PostMapping("/new")
-    public ResponseEntity<Music> saveMusic(@RequestBody MusicDto music){
+    public ResponseEntity<Music> saveMusic(@RequestBody Music music){
         Music ret = musicService.addMusic(music);
         return new ResponseEntity<Music>(ret, HttpStatus.OK);
     }
     @PutMapping("/{id}")
-    public ResponseEntity<Music> updateMusic(@PathVariable("id") Long id, @RequestBody MusicDto music){
+    public ResponseEntity<Music> updateMusic(@PathVariable("id") Long id, @RequestBody Music music){
 
         return new ResponseEntity<>(musicService.updateMusic(id, music), HttpStatus.OK);
     }

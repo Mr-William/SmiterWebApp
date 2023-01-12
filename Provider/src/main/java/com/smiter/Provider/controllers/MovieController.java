@@ -49,13 +49,12 @@ public class MovieController {
     }
 
     @PostMapping("/new")
-    public ResponseEntity<Movie> saveMovie(@RequestBody MovieDto movie){
-        System.out.println("Movie Title:" + movie.getTitle());
+    public ResponseEntity<Movie> saveMovie(@RequestBody Movie movie){
         Movie ret = movieService.addMovie(movie);
         return new ResponseEntity<Movie>(ret, HttpStatus.OK);
     }
     @PutMapping("/{id}")
-    public ResponseEntity<Movie> updateMovie(@PathVariable("id") Long id, @RequestBody MovieDto movie){
+    public ResponseEntity<Movie> updateMovie(@PathVariable("id") Long id, @RequestBody Movie movie){
 
         return new ResponseEntity<>(movieService.updateMovie(id, movie), HttpStatus.OK);
     }

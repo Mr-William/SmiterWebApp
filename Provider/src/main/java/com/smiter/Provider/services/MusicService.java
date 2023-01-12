@@ -7,9 +7,9 @@ import com.smiter.Provider.models.Music;
 
 public interface MusicService {
     
-    public Music addMusic(MusicDto musicDto);
+    public Music addMusic(Music musicDto);
     public List<Music> getAllMusic();
     public Music getById(Long id);
-    public Music updateMusic(Long musicId, MusicDto musicDto);
+    public Music updateMusic(Long musicId, Music musicDto);
     public String deleteMusic(Long musicId);
 }

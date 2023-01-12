@@ -20,30 +20,23 @@ public class MusicServiceImpl implements MusicService{
 
 	@Override
 	@Transactional
-	public Music addMusic(MusicDto musicDto) {
-
-		Music ms = new Music();
-        ms.setSongTitle(musicDto.getSongTitle());
-        ms.setAlbumTitle(musicDto.getAlbumTitle());
-        ms.setArtist(musicDto.getArtist());
-        ms.setGenre(musicDto.getGenre());
-
-		return musicRepo.save(ms);
+	public Music addMusic(Music tmp) {
+		return musicRepo.save(tmp);
 	}
 
 	@Override
 	public Music getById(Long id) {
-		return musicRepo.findById(id).get();
+		return musicRepo.getById(id);
 	}
 
 	@Override
-	public Music updateMusic(Long id, MusicDto musicDto) {
+	public Music updateMusic(Long id, Music tmp) {
 
 		Music ms = new Music();
-        ms.setSongTitle(musicDto.getSongTitle());
-        ms.setAlbumTitle(musicDto.getAlbumTitle());
-        ms.setArtist(musicDto.getArtist());
-        ms.setGenre(musicDto.getGenre());
+        ms.setSongTitle(tmp.getSongTitle());
+        ms.setAlbumTitle(tmp.getAlbumTitle());
+        ms.setArtist(tmp.getArtist());
+        ms.setGenre(tmp.getGenre());
         ms.setId(id);
 
 		return musicRepo.save(ms);
@@ -56,12 +49,8 @@ public class MusicServiceImpl implements MusicService{
 
     @Override
     public String deleteMusic(Long musicId) {
-        if(musicRepo.findById(musicId) != null){
             musicRepo.deleteById(musicId);
             return "Book with id " + musicId + " successfully deleted";
-        }else{
-            return "Book with id " + musicId + " could not be found";
-        }
     }
 
 }

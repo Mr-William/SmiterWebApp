@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-01-12T15:34:56 CST" name="Default suite" finished-at="2023-01-12T15:34:58 CST" duration-ms="1970">
+    <groups>
+    </groups>
+    <test started-at="2023-01-12T15:34:56 CST" name="Default test" finished-at="2023-01-12T15:34:58 CST" duration-ms="1970">
+      <class name="testpackage.servicetests.MusicServiceTest">
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:56 CST" name="springTestContextBeforeTestClass" finished-at="2023-01-12T15:34:56 CST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:56 CST" name="springTestContextPrepareTestInstance" finished-at="2023-01-12T15:34:57 CST" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="1656" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:57 CST" name="springTestContextBeforeTestMethod" finished-at="2023-01-12T15:34:57 CST" duration-ms="18" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.invalidId_returnsNull()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="init()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:57 CST" name="init" finished-at="2023-01-12T15:34:57 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="invalidId_returnsNull()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:57 CST" name="invalidId_returnsNull" finished-at="2023-01-12T15:34:58 CST" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidId_returnsNull -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextAfterTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.invalidId_returnsNull()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextBeforeTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.updatingEmptyTitle_ReturnsNull()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="init()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="init" finished-at="2023-01-12T15:34:58 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="updatingEmptyTitle_ReturnsNull()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="updatingEmptyTitle_ReturnsNull" finished-at="2023-01-12T15:34:58 CST" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatingEmptyTitle_ReturnsNull -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextAfterTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.updatingEmptyTitle_ReturnsNull()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextBeforeTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.whenEmptyTitle_MusicNotSaved()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="init()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="init" finished-at="2023-01-12T15:34:58 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="whenEmptyTitle_MusicNotSaved()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="whenEmptyTitle_MusicNotSaved" finished-at="2023-01-12T15:34:58 CST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whenEmptyTitle_MusicNotSaved -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextAfterTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.whenEmptyTitle_MusicNotSaved()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextBeforeTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.whenGivenValidId_DeleteMusic()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="init()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="init" finished-at="2023-01-12T15:34:58 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="whenGivenValidId_DeleteMusic()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="whenGivenValidId_DeleteMusic" finished-at="2023-01-12T15:34:58 CST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whenGivenValidId_DeleteMusic -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextAfterTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.whenGivenValidId_DeleteMusic()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextBeforeTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.whenMusicAdded_returnMusic()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="init()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="init" finished-at="2023-01-12T15:34:58 CST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="whenMusicAdded_returnMusic()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="whenMusicAdded_returnMusic" finished-at="2023-01-12T15:34:58 CST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whenMusicAdded_returnMusic -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextAfterTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.whenMusicAdded_returnMusic()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextBeforeTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.whenMusicUpdated_returnMusic()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="init()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="init" finished-at="2023-01-12T15:34:58 CST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="whenMusicUpdated_returnMusic()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="whenMusicUpdated_returnMusic" finished-at="2023-01-12T15:34:58 CST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whenMusicUpdated_returnMusic -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextAfterTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.whenMusicUpdated_returnMusic()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextBeforeTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.whenMusicsIsCalled_ShowAllMusics()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="init()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="init" finished-at="2023-01-12T15:34:58 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="whenMusicsIsCalled_ShowAllMusics()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="whenMusicsIsCalled_ShowAllMusics" finished-at="2023-01-12T15:34:58 CST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whenMusicsIsCalled_ShowAllMusics -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextAfterTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.whenMusicsIsCalled_ShowAllMusics()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextBeforeTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.whenNoMusicsExist_NoMusicsShown()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="init()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="init" finished-at="2023-01-12T15:34:58 CST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="whenNoMusicsExist_NoMusicsShown()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="whenNoMusicsExist_NoMusicsShown" finished-at="2023-01-12T15:34:58 CST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whenNoMusicsExist_NoMusicsShown -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextAfterTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.whenNoMusicsExist_NoMusicsShown()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextBeforeTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.whenValidIdGiven_returnMusic()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="init()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="init" finished-at="2023-01-12T15:34:58 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="whenValidIdGiven_returnMusic()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="whenValidIdGiven_returnMusic" finished-at="2023-01-12T15:34:58 CST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whenValidIdGiven_returnMusic -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextAfterTestMethod" finished-at="2023-01-12T15:34:58 CST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testpackage.servicetests.MusicServiceTest.whenValidIdGiven_returnMusic()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:testpackage.servicetests.MusicServiceTest@1907874b]" started-at="2023-01-12T15:34:58 CST" name="springTestContextAfterTestClass" finished-at="2023-01-12T15:34:58 CST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- testpackage.servicetests.MusicServiceTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

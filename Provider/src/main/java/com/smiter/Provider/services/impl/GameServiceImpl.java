@@ -20,23 +20,18 @@ public class GameServiceImpl implements GameService {
 
 	@Override
 	@Transactional
-	public Game addGame(GameDto gameDto) {
+	public Game addGame(Game gameDto) {
 
-		Game gm = new Game();
-        gm.setTitle(gameDto.getTitle());
-        gm.setGenre(gameDto.getGenre());
-        gm.setDatecompleted(gameDto.getDatecompleted());
-
-		return gameRepo.save(gm);
+		return gameRepo.save(gameDto);
 	}
 
 	@Override
 	public Game getById(Long id) {
-		return gameRepo.findById(id).get();
+		return gameRepo.getById(id);
 	}
 
 	@Override
-	public Game updateGame(Long id, GameDto gameDto) {
+	public Game updateGame(Long id, Game gameDto) {
 
 		Game gm = new Game();
         gm.setTitle(gameDto.getTitle());
@@ -54,12 +49,8 @@ public class GameServiceImpl implements GameService {
 
     @Override
     public String deleteGame(Long gameId) {
-        if(gameRepo.findById(gameId) != null){
             gameRepo.deleteById(gameId);
             return "Book with id " + gameId + " successfully deleted";
-        }else{
-            return "Book with id " + gameId + " could not be found";
-        }
     }
 
 }

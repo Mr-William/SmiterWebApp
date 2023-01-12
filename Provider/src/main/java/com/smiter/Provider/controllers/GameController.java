@@ -49,13 +49,12 @@ public class GameController {
     }
 
     @PostMapping("/new")
-    public ResponseEntity<Game> saveGame(@RequestBody GameDto game){
-        System.out.println("Game Title:" + game.getTitle());
+    public ResponseEntity<Game> saveGame(@RequestBody Game game){
         Game ret = gameService.addGame(game);
         return new ResponseEntity<Game>(ret, HttpStatus.OK);
     }
     @PutMapping("/{id}")
-    public ResponseEntity<Game> updateGame(@PathVariable("id") Long id, @RequestBody GameDto game){
+    public ResponseEntity<Game> updateGame(@PathVariable("id") Long id, @RequestBody Game game){
 
         return new ResponseEntity<>(gameService.updateGame(id, game), HttpStatus.OK);
     }
