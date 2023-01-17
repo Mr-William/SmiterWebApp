@@ -31,7 +31,7 @@ public class GameController {
         Game game = gameService.getById(id);
 
         if(game != null){
-            return new ResponseEntity<>(game, HttpStatus.OK);
+            return new ResponseEntity<Game>(game, HttpStatus.OK);
         }
         else{
             
@@ -56,7 +56,13 @@ public class GameController {
     @PutMapping("/{id}")
     public ResponseEntity<Game> updateGame(@PathVariable("id") Long id, @RequestBody Game game){
 
-        return new ResponseEntity<>(gameService.updateGame(id, game), HttpStatus.OK);
+        Game tmp = gameService.updateGame(id, game);
+
+        if(tmp == null){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        return new ResponseEntity<>(tmp, HttpStatus.OK);
     }
     
     @DeleteMapping("/{id}")

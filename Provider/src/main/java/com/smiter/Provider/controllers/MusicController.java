@@ -56,7 +56,13 @@ public class MusicController {
     @PutMapping("/{id}")
     public ResponseEntity<Music> updateMusic(@PathVariable("id") Long id, @RequestBody Music music){
 
-        return new ResponseEntity<>(musicService.updateMusic(id, music), HttpStatus.OK);
+        Music tmp = musicService.updateMusic(id, music);
+
+        if(tmp == null){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        return new ResponseEntity<>(tmp, HttpStatus.OK);
     }
     
     @DeleteMapping("/{id}")

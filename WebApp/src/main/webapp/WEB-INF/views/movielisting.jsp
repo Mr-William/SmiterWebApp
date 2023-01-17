@@ -23,7 +23,7 @@
     <section class="flex-sect" id="is95">
       <div class="gjs-row" id="ig5f">
         <div class="gjs-cell" id="ir4d">
-          <div class="movie-modal hidden">
+          <form name="movieForm" class="movie-modal hidden">
             <div class="flex">
               <button class="btn-close">x</button>
             </div>
@@ -32,13 +32,18 @@
               <h4>${error}</h4>
               <p>Here you can modify the information stored about a movie.</p>
             </div>
-            <input type="text" ng-model="ctrl.movie.title" placeholder="Movie Title" required />
-            <input type="text" ng-model="ctrl.movie.genre" placeholder="Genre" required />
-            <input type="text" ng-model="ctrl.movie.director" placeholder="Director" required />
-            <input type="text" ng-model="ctrl.movie.producer" placeholder="Producer" required />
-            <button ng-click="submitUpdate()" class="btn btn-success">Finished</button>
-            <button ng-click="movieDelete()" class="btn btn-danger">Delete Movie</button>
-        </div>
+            <input type="text" id="movieTitle" ng-model="ctrl.movie.title" placeholder="Movie Title" required ng-minlength="3"/>
+            <div class="has-error" ng-show="movieForm.$dirty">
+              <span ng-show="movieForm.title.$error.required">You must enter a title</span>
+              <span ng-show="movieForm.title.$error.minlength">Title must be at least 3 characters</span>
+              <span ng-show="movieForm.title.$invalid">The title is invalid</span>
+           </div>
+            <input type="text" id="movieGenre" ng-model="ctrl.movie.genre" placeholder="Genre"/>
+            <input type="text" id="movieDirector" ng-model="ctrl.movie.director" placeholder="Director"/>
+            <input type="text" id="movieProducer" ng-model="ctrl.movie.producer" placeholder="Producer"/>
+            <button ng-click="submitUpdate()" id="updateMovieBtn" class="btn btn-success">Finished</button>
+            <button ng-click="movieDelete()" id="deleteMovieBtn" class="btn btn-danger">Delete Movie</button>
+          </form>
         
           <div id="i6oy">
             <u>
@@ -74,14 +79,14 @@
                 <td><span ng-bind="currentMovie.producer"></span></td>
                 <td><span ng-bind="currentMovie.director"></span></td>
                 <td></td>
-                <td><button data-ng-click="ctrl.editDetails(currentMovie.id)" class="btn btn-info">Edit Details</button></td>
+                <td><button data-ng-click="ctrl.editDetails(currentMovie.id)" id="editMovieBtn" class="btn btn-info">Edit Details</button></td>
 
               </tr>
             </tbody>
           </table>
         </div>
         <div class="gjs-cell" id="i5rij">
-          <a class="btn btn-success" href="/addmovie">Add New ${message}</a>
+          <a class="btn btn-success" id="addMovieBtn" href="/addmovie">Add New ${message}</a>
         </div>
       </div>
     </section>

@@ -56,7 +56,13 @@ public class MovieController {
     @PutMapping("/{id}")
     public ResponseEntity<Movie> updateMovie(@PathVariable("id") Long id, @RequestBody Movie movie){
 
-        return new ResponseEntity<>(movieService.updateMovie(id, movie), HttpStatus.OK);
+        Movie tmp = movieService.updateMovie(id, movie);
+
+        if(tmp == null){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        return new ResponseEntity<>(tmp, HttpStatus.OK);
     }
     
     @DeleteMapping("/{id}")

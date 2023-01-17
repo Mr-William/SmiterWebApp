@@ -2,7 +2,6 @@ package com.smiter.Provider.services;
 
 import java.util.List;
 
-import com.smiter.Provider.dtos.GameDto;
 import com.smiter.Provider.models.Game;
 
 public interface GameService {

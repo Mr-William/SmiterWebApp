@@ -57,7 +57,13 @@ public class BookController {
     @PutMapping("/{id}")
     public ResponseEntity<Book> updateBook(@PathVariable("id") Long id, @RequestBody Book book){
 
-        return new ResponseEntity<>(bookService.updateBook(id, book), HttpStatus.OK);
+        Book bk = bookService.updateBook(id, book);
+        
+        if(bk == null){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        return new ResponseEntity<Book>(bk, HttpStatus.OK);
     }
     
     @DeleteMapping("/{id}")

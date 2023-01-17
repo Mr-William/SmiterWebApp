@@ -23,7 +23,7 @@
     <section class="flex-sect" id="is95">
       <div class="gjs-row" id="ig5f">
         <div class="gjs-cell" id="ir4d">
-          <div class="music-modal hidden">
+          <form name="songForm" class="music-modal hidden">
             <div class="flex">
               <button class="btn-close">x</button>
             </div>
@@ -32,13 +32,23 @@
               <h4>${error}</h4>
               <p>Here you can modify the information stored about a music.</p>
             </div>
-            <input type="text" ng-model="ctrl.music.songTitle" placeholder="Song Title" required />
-            <input type="text" ng-model="ctrl.music.albumTitle" placeholder="Album" required />
-            <input type="text" ng-model="ctrl.music.artist" placeholder="Artist" required />
-            <input type="text" ng-model="ctrl.music.genre" placeholder="Genre" required />
-            <button ng-click="submitUpdate()" class="btn btn-success">Finished</button>
-            <button ng-click="musicDelete()" class="btn btn-danger">Delete Music</button>
-        </div>
+            <input type="text" id="songTitle" ng-model="ctrl.music.songTitle" placeholder="Song Title" required />
+            <div class="has-error" ng-show="musicForm.$dirty">
+              <span ng-show="musicForm.title.$error.required">You must enter a title</span>
+              <span ng-show="musicForm.title.$error.minlength">Title must be at least 3 characters</span>
+              <span ng-show="musicForm.title.$invalid">The title is invalid</span>
+           </div>
+            <input type="text" id="albumTitle" ng-model="ctrl.music.albumTitle" placeholder="Album"/>
+            <input type="text" id="artist" ng-model="ctrl.music.artist" placeholder="Artist" required />
+            <div class="has-error" ng-show="musicForm.$dirty">
+              <span ng-show="musicForm.title.$error.required">You must enter an Artist</span>
+              <span ng-show="musicForm.title.$error.minlength">Artist name must be at least 3 characters</span>
+              <span ng-show="musicForm.title.$invalid">The artist name is invalid</span>
+           </div>
+            <input type="text" id="genre" ng-model="ctrl.music.genre" placeholder="Genre"/>
+            <button ng-click="submitUpdate()" id="updateMusicBtn" class="btn btn-success">Finished</button>
+            <button ng-click="musicDelete()" id="deleteMusicBtn" class="btn btn-danger">Delete Music</button>
+          </form>
         
           <div id="i6oy">
             <u>
@@ -74,14 +84,14 @@
                 <td><span ng-bind="currentMusic.genre"></span></td>
                 <td><span ng-bind="currentMusic.artist"></span></td>
                 <td></td>
-                <td><button data-ng-click="ctrl.editDetails(currentMusic.id)" class="btn btn-info">Edit Details</button></td>
+                <td><button data-ng-click="ctrl.editDetails(currentMusic.id)" id="editMusicBtn" class="btn btn-info">Edit Details</button></td>
 
               </tr>
             </tbody>
           </table>
         </div>
         <div class="gjs-cell" id="i5rij">
-          <a class="btn btn-success" href="/addmusic">Add New ${message}</a>
+          <a class="btn btn-success" id="addMusicBtn" href="/addmusic">Add New ${message}</a>
         </div>
       </div>
     </section>

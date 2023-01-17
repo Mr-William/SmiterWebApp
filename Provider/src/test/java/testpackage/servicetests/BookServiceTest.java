@@ -11,8 +11,6 @@ import static org.mockito.Mockito.when;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
-
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -163,7 +161,7 @@ public class BookServiceTest extends AbstractTestNGSpringContextTests{
         updated.setId(book1.getId());
         updated.setDatecompleted(book1.getDatecompleted());
         updated.setGenre(book1.getGenre());
-        updated.setTitle("");
+        updated.setTitle(null);
 
         when(mockRepo.save(Mockito.any())).thenThrow(new NullPointerException());
         when(mockRepo.getOne(Mockito.anyLong())).thenReturn(book1);

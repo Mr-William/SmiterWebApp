@@ -31,7 +31,7 @@
           <div><span data-ng-if="ctrl.error" class="error-message" ng-bind="ctrl.error"></span></div>
             	<div><span data-ng-if="ctrl.message" class="confirm-message" ng-bind="ctrl.message"></span></div>
         </div>
-        <form ng-submit="ctrl.createGame()" name="gameForm"
+        <form ng-submit="ctrl.createGame()" name="gameForm" id="gameForm"
           class="form-horizontal">
           <span class="border border-info"></span>
           <input type="hidden" ng-model="ctrl.game.id"/>
@@ -40,7 +40,7 @@
               <label class="col-md-2 control-label" for="title">Game Title: </label>
               <div class="col-md-7">
                 <input type="text" ng-model="ctrl.game.title"
-                  id="title" class="from-control input-sm"
+                  id="gameTitle" class="from-control input-sm"
                   placeholder="Enter Game Title" required/>
               </div>
             </div>
@@ -50,7 +50,7 @@
               <label class="col-md-2 control-label" for="genre">Game Genre: </label>
               <div class="col-md-7">
                 <input type="text" ng-model="ctrl.game.genre"
-                  id="genre" class="from-control input-sm"
+                  id="gameGenre" class="from-control input-sm"
                   placeholder="Optional - Game genre."/>
               </div>
             </div>
@@ -59,14 +59,14 @@
             <div class="form-group col-md-12">
                 <label class="col-md-2 control-label" for="game_datecompleted">Date Last Played:</label>
                 <div class="col-md-7">
-                    <input type="date" ng-model="ctrl.game.datecompleted" id="game_datecompleted" required />
+                    <input type="date" ng-model="ctrl.game.datecompleted" id="game_datecompleted"/>
                 </div>
             </div>
         </div>
           <div class="gjs-row">
             <div class="form-actions floatRight">
-              <input type="submit" value="Add Game" class="btn btn-primary btn-sm">
-              <button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm"
+              <input type="submit" id="submitGameForm" value="Add Game" class="btn btn-primary btn-sm">
+              <button type="button" id="resetFormBtn" ng-click="ctrl.reset()" class="btn btn-warning btn-sm"
               ng-disabled="gameForm.$pristine">Reset Form</button>
             </div>
           </div>
