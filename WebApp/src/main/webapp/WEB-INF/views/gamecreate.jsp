@@ -59,7 +59,7 @@
             <div class="form-group col-md-12">
                 <label class="col-md-2 control-label" for="game_datecompleted">Date Last Played:</label>
                 <div class="col-md-7">
-                    <input type="date" ng-model="ctrl.game.datecompleted" id="game_datecompleted"/>
+                    <input type="text" ng-model="ctrl.game.datecompleted" id="game_datecompleted"/>
                 </div>
             </div>
         </div>

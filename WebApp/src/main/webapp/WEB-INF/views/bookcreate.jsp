@@ -69,7 +69,7 @@
             <div class="form-group col-md-12">
                 <label class="col-md-2 control-label" for="book_datecompleted">Date You Completed:</label>
                 <div class="col-md-7">
-                    <input type="date" ng-model="ctrl.book.datecompleted" id="book_datecompleted"/>
+                    <input type="text" ng-model="ctrl.book.datecompleted" id="book_datecompleted"/>
                 </div>
             </div>
         </div>

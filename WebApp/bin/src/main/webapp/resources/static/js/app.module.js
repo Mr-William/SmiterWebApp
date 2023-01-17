@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('SmiterApp', []);
+var SmiterApp = angular.module('SmiterApp', []);
