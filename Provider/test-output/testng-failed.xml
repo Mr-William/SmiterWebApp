@@ -5,10 +5,7 @@
     <classes>
       <class name="testpackage.webapptests.WebAppTesting">
         <methods>
-          <include name="editBook"/>
           <include name="startTest"/>
-          <include name="deleteBook"/>
-          <include name="deleteGame"/>
           <include name="editGame"/>
           <include name="endTest"/>
         </methods>

@@ -31,35 +31,4 @@ public class Music {
 
     @Column(name = "SONG_GENRE")
     private String genre;
-    
-    // public Long getId() {
-    // 	return id;
-    // }
-    // public void setId(Long id) {
-    // 	this.id = id;
-    // }
-    // public String getSongTitle() {
-    // 	return songTitle;
-    // }
-    // public void setSongTitle(String songTitle) {
-    // 	this.songTitle = songTitle;
-    // }
-    // public String getAlbumTitle() {
-    // 	return albumTitle;
-    // }
-    // public void setAlbumTitle(String title) {
-    // 	this.albumTitle = title;
-    // }
-    // public String getArtist() {
-    // 	return artist;
-    // }
-    // public void setArtist(String artist) {
-    // 	this.artist = artist;
-    // }
-    // public String getGenre() {
-    // 	return genre;
-    // }
-    // public void setGenre(String genre) {
-    // 	this.genre = genre;
-    // }
 }

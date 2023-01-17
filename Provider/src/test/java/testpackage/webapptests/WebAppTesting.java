@@ -2,9 +2,12 @@ package testpackage.webapptests;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.logging.log4j.util.Strings;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -69,6 +72,10 @@ public class WebAppTesting {
       driver.findElement(By.id("bookAddBtn")).click();
       driver.findElement(By.id("bookTitle")).click();
       driver.findElement(By.id("bookTitle")).sendKeys("Don Quixote");
+      
+      assertTrue(driver.findElement(By.id("bookTitle")).getText() != null);
+      assertTrue(driver.findElement(By.id("bookAuthor")).getText() != null);
+      
       driver.findElement(By.id("bookAddBtn")).click();
     }
 
@@ -80,7 +87,11 @@ public class WebAppTesting {
         driver.findElement(By.id("editBookBtn")).click();
         driver.findElement(By.id("bookTitle")).clear();
         driver.findElement(By.id("bookTitle")).click();
-        driver.findElement(By.id("bookTitle")).sendKeys("Anna Karenina");
+        driver.findElement(By.id("bookTitle")).sendKeys("");
+        
+        assertTrue(driver.findElement(By.id("bookTitle")).getText() != null);
+        assertTrue(driver.findElement(By.id("bookAuthor")).getText() != null);
+        
         driver.findElement(By.id("submitUpdateBtn")).click();
     }
 
@@ -117,7 +128,11 @@ public class WebAppTesting {
         
         driver.findElement(By.id("gameTitle")).click();
         driver.findElement(By.id("gameTitle")).sendKeys("Elden Ring");
+
+        assertFalse(driver.findElement(By.id("gameTitle")).getAttribute("value").isBlank());
+        
         driver.findElement(By.id("submitGameForm")).click();
+        
     }
 
     //Editing Game
@@ -129,6 +144,7 @@ public class WebAppTesting {
         driver.findElement(By.id("gameGenre")).clear();
         driver.findElement(By.id("gameGenre")).click();
         driver.findElement(By.id("gameGenre")).sendKeys("Action Rpg");
+        
         driver.findElement(By.id("updateBtn")).click();
     }
 
@@ -164,6 +180,9 @@ public class WebAppTesting {
         driver.findElement(By.id("movieTitle")).sendKeys("Liar Liar");
         driver.findElement(By.id("movieGenre")).click();
         driver.findElement(By.id("movieGenre")).sendKeys("Comedy");
+        
+        assertFalse(driver.findElement(By.id("movieTitle")).getAttribute("value").isBlank());
+        
         driver.findElement(By.id("submitNewMovieBtn")).click();
     }
 
@@ -175,6 +194,9 @@ public class WebAppTesting {
         driver.findElement(By.id("editMovieBtn")).click();
         driver.findElement(By.id("movieDirector")).click();
         driver.findElement(By.id("movieDirector")).clear();
+        
+        assertFalse(driver.findElement(By.id("movieTitle")).getAttribute("value").isBlank());
+        
         driver.findElement(By.id("updateMovieBtn")).click();
     }
 
@@ -210,6 +232,10 @@ public class WebAppTesting {
         driver.findElement(By.id("submitNewMusicBtn")).click();
         driver.findElement(By.id("songTitle")).click();
         driver.findElement(By.id("songTitle")).sendKeys("Brighter Side of Grey");
+        
+        assertFalse(driver.findElement(By.id("songTitle")).getAttribute("value").isBlank());
+        assertFalse(driver.findElement(By.id("songArtist")).getAttribute("value").isBlank());
+        
         driver.findElement(By.id("submitNewMusicBtn")).click();
     }
 
@@ -224,6 +250,7 @@ public class WebAppTesting {
         driver.findElement(By.id("songTitle")).sendKeys("A Little Bit Off");
         driver.findElement(By.id("albumTitle")).click();
         driver.findElement(By.id("albumTitle")).sendKeys("F8");
+                
         driver.findElement(By.id("updateMusicBtn")).click();
     }
 
