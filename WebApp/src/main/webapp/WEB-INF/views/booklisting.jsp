@@ -23,7 +23,7 @@
     <section class="flex-sect" id="is95">
       <div class="gjs-row" id="ig5f">
         <div class="gjs-cell" id="ir4d">
-          <div class="book-modal hidden">
+          <form name="bookForm" class="book-modal hidden">
             <div class="flex">
               <button class="btn-close">x</button>
             </div>
@@ -32,12 +32,22 @@
               <h4>${error}</h4>
               <p>Here you can modify the information stored about a book.</p>
             </div>
-            <input type="text" ng-model="ctrl.book.title" placeholder="Book Title" required />
-            <input type="text" ng-model="ctrl.book.author" placeholder="Author" required />
-            <input type="text" ng-model="ctrl.book.genre" placeholder="Genre" required />
-            <button ng-click="submitUpdate()" class="btn btn-success">Finished</button>
-            <button ng-click="bookDelete()" class="btn btn-danger">Delete Book</button>
-        </div>
+            <input type="text" id="bookTitle" ng-model="ctrl.book.title" placeholder="Book Title" required ng-minlength="3"/>
+            <div class="has-error" ng-show="bookForm.$dirty">
+              <span ng-show="bookForm.title.$error.required">You must enter a title</span>
+              <span ng-show="bookForm.title.$error.minlength">Title must be at least 3 characters</span>
+              <span ng-show="bookForm.title.$invalid">The title is invalid</span>
+           </div>
+            <input type="text" id="bookAuthor" ng-model="ctrl.book.author" placeholder="Author" required ng-minlength="3" />
+            <div class="has-error" ng-show="bookForm.$dirty">
+              <span ng-show="bookForm.title.$error.required">You must enter author name</span>
+              <span ng-show="bookForm.title.$error.minlength">Author name must be at least 3 characters</span>
+              <span ng-show="bookForm.title.$invalid">The author name is invalid</span>
+           </div>
+            <input type="text" id="bookGenre" ng-model="ctrl.book.genre" placeholder="Genre"/>
+            <button ng-click="submitUpdate()" id="submitUpdateBtn" class="btn btn-success">Finished</button>
+            <button ng-click="bookDelete()" id="deleteBtn" class="btn btn-danger">Delete Book</button>
+          </form>
         
           <div id="i6oy">
             <u>
@@ -73,14 +83,14 @@
                 <td><span ng-bind="currentBook.genre"></span></td>
                 <td><span ng-bind="currentBook.datecompleted"></span></td>
                 <td></td>
-                <td><button data-ng-click="ctrl.editDetails(currentBook.id)" class="btn btn-info">Edit Details</button></td>
+                <td><button id="editBookBtn" data-ng-click="ctrl.editDetails(currentBook.id)" class="btn btn-info">Edit Details</button></td>
 
               </tr>
             </tbody>
           </table>
         </div>
         <div class="gjs-cell" id="i5rij">
-          <a class="btn btn-success" href="/addbook">Add New ${message}</a>
+          <a class="btn btn-success" id="addBookBtn" href="/addbook">Add New ${message}</a>
         </div>
       </div>
     </section>

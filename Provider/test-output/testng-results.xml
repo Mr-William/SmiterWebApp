@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-01-17T16:41:54 CST" name="Default suite" finished-at="2023-01-17T16:42:30 CST" duration-ms="36181">
+    <groups>
+    </groups>
+    <test started-at="2023-01-17T16:41:54 CST" name="Default test" finished-at="2023-01-17T16:42:30 CST" duration-ms="36181">
+      <class name="testpackage.webapptests.WebAppTesting">
+        <test-method is-config="true" signature="startTest()[pri:0, instance:testpackage.webapptests.WebAppTesting@5e21e98f]" started-at="2023-01-17T16:41:54 CST" name="startTest" finished-at="2023-01-17T16:41:58 CST" duration-ms="3826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method signature="navigatePages()[pri:-1, instance:testpackage.webapptests.WebAppTesting@5e21e98f]" started-at="2023-01-17T16:41:58 CST" name="navigatePages" finished-at="2023-01-17T16:42:07 CST" duration-ms="9423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigatePages -->
+        <test-method signature="addBook()[pri:1, instance:testpackage.webapptests.WebAppTesting@5e21e98f]" started-at="2023-01-17T16:42:07 CST" name="addBook" finished-at="2023-01-17T16:42:10 CST" duration-ms="2498" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+        <test-method signature="editBook()[pri:2, instance:testpackage.webapptests.WebAppTesting@5e21e98f]" started-at="2023-01-17T16:42:10 CST" name="editBook" finished-at="2023-01-17T16:42:11 CST" duration-ms="1626" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editBook -->
+        <test-method signature="deleteBook()[pri:3, instance:testpackage.webapptests.WebAppTesting@5e21e98f]" started-at="2023-01-17T16:42:11 CST" name="deleteBook" finished-at="2023-01-17T16:42:13 CST" duration-ms="1823" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBook -->
+        <test-method signature="addGame()[pri:4, instance:testpackage.webapptests.WebAppTesting@5e21e98f]" started-at="2023-01-17T16:42:13 CST" name="addGame" finished-at="2023-01-17T16:42:16 CST" duration-ms="2511" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addGame -->
+        <test-method signature="editGame()[pri:5, instance:testpackage.webapptests.WebAppTesting@5e21e98f]" started-at="2023-01-17T16:42:16 CST" name="editGame" finished-at="2023-01-17T16:42:18 CST" duration-ms="2151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editGame -->
+        <test-method signature="deleteGame()[pri:6, instance:testpackage.webapptests.WebAppTesting@5e21e98f]" started-at="2023-01-17T16:42:18 CST" name="deleteGame" finished-at="2023-01-17T16:42:19 CST" duration-ms="1090" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteGame -->
+        <test-method signature="addMovie()[pri:7, instance:testpackage.webapptests.WebAppTesting@5e21e98f]" started-at="2023-01-17T16:42:19 CST" name="addMovie" finished-at="2023-01-17T16:42:21 CST" duration-ms="2337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addMovie -->
+        <test-method signature="editMovie()[pri:8, instance:testpackage.webapptests.WebAppTesting@5e21e98f]" started-at="2023-01-17T16:42:21 CST" name="editMovie" finished-at="2023-01-17T16:42:23 CST" duration-ms="1179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editMovie -->
+        <test-method signature="deleteMovie()[pri:9, instance:testpackage.webapptests.WebAppTesting@5e21e98f]" started-at="2023-01-17T16:42:23 CST" name="deleteMovie" finished-at="2023-01-17T16:42:24 CST" duration-ms="1518" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteMovie -->
+        <test-method signature="addMusic()[pri:10, instance:testpackage.webapptests.WebAppTesting@5e21e98f]" started-at="2023-01-17T16:42:24 CST" name="addMusic" finished-at="2023-01-17T16:42:27 CST" duration-ms="2830" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addMusic -->
+        <test-method signature="editMusic()[pri:11, instance:testpackage.webapptests.WebAppTesting@5e21e98f]" started-at="2023-01-17T16:42:27 CST" name="editMusic" finished-at="2023-01-17T16:42:29 CST" duration-ms="1668" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editMusic -->
+        <test-method signature="deleteMusic()[pri:12, instance:testpackage.webapptests.WebAppTesting@5e21e98f]" started-at="2023-01-17T16:42:29 CST" name="deleteMusic" finished-at="2023-01-17T16:42:30 CST" duration-ms="1188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteMusic -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:testpackage.webapptests.WebAppTesting@5e21e98f]" started-at="2023-01-17T16:42:30 CST" name="endTest" finished-at="2023-01-17T16:42:30 CST" duration-ms="309" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- testpackage.webapptests.WebAppTesting -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

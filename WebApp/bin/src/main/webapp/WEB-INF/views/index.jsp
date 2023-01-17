@@ -6,9 +6,6 @@
 <html lang="en">
     <head>
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
-    	<script src="resources/static/js/app.module.js"></script>
-		<script src="resources/static/js/controller/user.controller.js"></script>
-		<script src="resources/static/js/service/user.service.js"></script>
     	<link rel="stylesheet" href="resources/static/css/style.css">
     	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     	<title>${message}</title>
@@ -16,16 +13,16 @@
 	</head>
 	<smiter:myNav/>
 	<div class="container-width"></div>
-  <header id="it3l" class="header-banner">
+  <header class="header-banner">
     <div id="iisz" class="container-width" >
       <div id="ilwp" class="logo-container">
       </div>
       <div id="iry3p" class="clearfix">
       </div>
-      <div id="in1va" class="lead-title">Imagine managing tasks for everybody....in one place.
+      <div id="in1va" class="lead-title">Imagine having a single place for your many thoughts on all things entertainment...
         <br/>
       </div>
-      <div id="inlum" class="sub-lead-title">With SMITER, you have a System for Managing Individual Tasks, Expectations, and Roles for any application you can think of.
+      <div id="inlum" class="sub-lead-title">With SMITER, you have a place with SO MANY INDIVIDUALS TRADING ENTERTAINMENT RECCOMMENDATIONS!
         <br/>
       </div>
       <div id="isw6g9" class="gjs-row">
@@ -33,11 +30,7 @@
           <div id="i38ypo" class="gjs-row">
             <div id="ia5mfe" class="gjs-cell">
             </div>
-            <div id="igr4fu" class="gjs-cell">
-            	<div class="nav nav-fill">
-            		<a class="lead-btn" href="login" role="button">Login</a><br><br>
-              		<a class="lead-btn" href="registration" role="button">Sign Up</a> 
-              	</div>
+            
             </div>
           </div>
         </div>
@@ -46,43 +39,47 @@
   </header>
   <section class="am-sect">
     <div class="container-width">
+      <a class="btn btn-primary btn-lg btn-block" href="movies">MOVIES</a>
+      <a class="btn btn-primary btn-lg btn-block" href="musics">MUSIC</a>
+      <a class="btn btn-primary btn-lg btn-block" href="books">BOOKS</a>
+      <a class="btn btn-primary btn-lg btn-block" href="games">GAMES</a>
     </div>
   </section>
   <section id="i8k05" class="blk-sect">
     <div class="container-width">
-      <div id="iad16" class="blk-title">How Can You Use SMITER?
+      <div id="iad16" class="blk-title">What is SMITER?
         <br/>
       </div>
-      <div id="io4bf" class="blk-desc">While the possibilities are nearly endless, here are some examples
+      <div id="io4bf" class="blk-desc">I'm glad you asked with SMITER you and others can:
         <br/>
       </div>
       <div class="price-cards">
         <div class="price-card-cont">
           <div class="price-card">
-            <div id="iy7gyf" class="pc-title">At Work
+            <div id="iy7gyf" class="pc-title">Share
               <br/>
             </div>
-            <div id="ihavpe" class="pc-desc">Create a group and invite members to assign tasks such as training or daily tasks and track completion.
+            <div id="ihavpe" class="pc-desc">See a great movie and want to tell everybody about it?<br>Share it here!
               <br/>
             </div>
           </div>
         </div>
         <div class="price-card-cont">
-          <div class="price-card pc-regular">
-            <div id="i9avyk" class="pc-title">At School
+          <div class="price-card">
+            <div id="i9avyk" class="pc-title">Discuss
               <br/>
             </div>
-            <div id="i2v51f" class="pc-desc">Assign learning objectives or assignments and allow students to send work or make files available for them to access.
+            <div id="i2v51f" class="pc-desc">The plot twist leave you needing somebody to connect with? <br>Talk about it!
               <br/>
             </div>
           </div>
         </div>
         <div id="icr5pb" class="price-card-cont">
-          <div id="itrwcv" class="price-card pc-enterprise">
-            <div id="idjkjg" class="pc-title">At Home
+          <div id="itrwcv" class="price-card">
+            <div id="idjkjg" class="pc-title">Review
               <br/>
             </div>
-            <div id="i5mnhi" class="pc-desc">Create a chore list for everybody in your home so they know what is expected and needs to be done.
+            <div id="i5mnhi" class="pc-desc">That game that just came out was medicore? <br>Review It!
               <br/>
             </div>
           </div>

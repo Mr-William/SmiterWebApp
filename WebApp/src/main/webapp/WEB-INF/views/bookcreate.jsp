@@ -40,7 +40,7 @@
               <label class="col-md-2 control-label" for="title">Book Title: </label>
               <div class="col-md-7">
                 <input type="text" ng-model="ctrl.book.title"
-                  id="title" class="from-control input-sm"
+                  id="bookTitle" class="from-control input-sm"
                   placeholder="Enter Book Title" required/>
               </div>
             </div>
@@ -50,7 +50,7 @@
               <label class="col-md-2 control-label" for="author">Book Author: </label>
               <div class="col-md-7">
                 <input type="text" ng-model="ctrl.book.author"
-                  id="author" class="from-control input-sm"
+                  id="bookAuthor" class="from-control input-sm"
                   placeholder="Enter Book Author" required/>
               </div>
             </div>
@@ -60,7 +60,7 @@
               <label class="col-md-2 control-label" for="genre">Book Genre: </label>
               <div class="col-md-7">
                 <input type="text" ng-model="ctrl.book.genre"
-                  id="genre" class="from-control input-sm"
+                  id="bookGenre" class="from-control input-sm"
                   placeholder="Optional - Book genre."/>
               </div>
             </div>
@@ -69,14 +69,14 @@
             <div class="form-group col-md-12">
                 <label class="col-md-2 control-label" for="book_datecompleted">Date You Completed:</label>
                 <div class="col-md-7">
-                    <input type="date" ng-model="ctrl.book.datecompleted" id="book_datecompleted" required />
+                    <input type="text" ng-model="ctrl.book.datecompleted" id="book_datecompleted"/>
                 </div>
             </div>
         </div>
           <div class="gjs-row">
             <div class="form-actions floatRight">
-              <input type="submit" value="Add Book" class="btn btn-primary btn-sm">
-              <button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm"
+              <input type="submit" id="bookAddBtn" value="Add Book" class="btn btn-primary btn-sm">
+              <button type="button" id="formResetBtn" ng-click="ctrl.reset()" class="btn btn-warning btn-sm"
               ng-disabled="bookForm.$pristine">Reset Form</button>
             </div>
           </div>

@@ -31,7 +31,7 @@
           <div><span data-ng-if="ctrl.error" class="error-message" ng-bind="ctrl.error"></span></div>
             	<div><span data-ng-if="ctrl.message" class="confirm-message" ng-bind="ctrl.message"></span></div>
         </div>
-        <form ng-submit="ctrl.createMovie()" name="movieForm"
+        <form ng-submit="ctrl.createMovie()" name="movieForm" id="movieForm"
           class="form-horizontal">
           <span class="border border-info"></span>
           <input type="hidden" ng-model="ctrl.movie.id"/>
@@ -40,7 +40,7 @@
               <label class="col-md-2 control-label" for="title">Movie Title: </label>
               <div class="col-md-7">
                 <input type="text" ng-model="ctrl.movie.title"
-                  id="title" class="from-control input-sm"
+                  id="movieTitle" class="from-control input-sm"
                   placeholder="Enter Movie Title" required/>
               </div>
             </div>
@@ -50,7 +50,7 @@
               <label class="col-md-2 control-label" for="genre">Movie Genre: </label>
               <div class="col-md-7">
                 <input type="text" ng-model="ctrl.movie.genre"
-                  id="genre" class="from-control input-sm"
+                  id="movieGenre" class="from-control input-sm"
                   placeholder="Optional - Movie genre."/>
               </div>
             </div>
@@ -59,7 +59,7 @@
             <div class="form-group col-md-12">
                 <label class="col-md-2 control-label" for="movie_director">Director:</label>
                 <div class="col-md-7">
-                    <input type="text" ng-model="ctrl.movie.director" placeholder="Optional - Director" id="movie_director"/>
+                    <input type="text" ng-model="ctrl.movie.director" placeholder="Optional - Director" id="movieDirector"/>
                 </div>
             </div>
         </div>
@@ -67,14 +67,14 @@
             <div class="form-group col-md-12">
                 <label class="col-md-2 control-label" for="movie_producer">Producer:</label>
                 <div class="col-md-7">
-                    <input type="text" ng-model="ctrl.movie.producer" placeholder="Optional - Producer" id="movie_producer"/>
+                    <input type="text" ng-model="ctrl.movie.producer" placeholder="Optional - Producer" id="movieProducer"/>
                 </div>
             </div>
         </div>
           <div class="gjs-row">
             <div class="form-actions floatRight">
-              <input type="submit" value="Add Movie" class="btn btn-primary btn-sm">
-              <button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm"
+              <input type="submit" id="submitNewMovieBtn" value="Add Movie" class="btn btn-primary btn-sm">
+              <button type="button" id="resetMovieFormBtn" ng-click="ctrl.reset()" class="btn btn-warning btn-sm"
               ng-disabled="movieForm.$pristine">Reset Form</button>
             </div>
           </div>

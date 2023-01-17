@@ -20,31 +20,24 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	@Transactional
-	public Book addBook(BookDto bookDto) {
-
-        Book bk = new Book();
-
-        bk.setTitle(bookDto.getTitle());
-        bk.setAuthor(bookDto.getAuthor());
-        bk.setGenre(bookDto.getGenre());
-        bk.setDatecompleted(bookDto.getDatecompleted());
-        return bookRepo.save(bk);
+	public Book addBook(Book save) {
+        return bookRepo.save(save);
 	}
 
 	@Override
 	public Book getById(Long id) {
-		return bookRepo.findById(id).get();
+		return bookRepo.getById(id);
 	}
 
 	@Override
-	public Book updateBook(Long id, BookDto bookDto) {
+	public Book updateBook(Long id, Book tmp) {
 
 		Book bk = new Book();
         
-        bk.setTitle(bookDto.getTitle());
-        bk.setAuthor(bookDto.getAuthor());
-        bk.setGenre(bookDto.getGenre());
-        bk.setDatecompleted(bookDto.getDatecompleted());
+        bk.setTitle(tmp.getTitle());
+        bk.setAuthor(tmp.getAuthor());
+        bk.setGenre(tmp.getGenre());
+        bk.setDatecompleted(tmp.getDatecompleted());
         bk.setId(id);
 
 		return bookRepo.save(bk);
@@ -57,12 +50,9 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public String deleteBook(Long bookId) {
-        if(bookRepo.findById(bookId) != null){
+    	
             bookRepo.deleteById(bookId);
             return "Book with id " + bookId + " successfully deleted";
-        }else{
-            return "Book with id " + bookId + " could not be found";
-        }
     }
 
 }

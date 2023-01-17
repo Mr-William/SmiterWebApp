@@ -20,24 +20,18 @@ public class MovieServiceImpl implements MovieService{
 
 	@Override
 	@Transactional
-	public Movie addMovie(MovieDto movieDto) {
+	public Movie addMovie(Movie movieDto) {
 
-		Movie mv = new Movie();
-        mv.setTitle(movieDto.getTitle());
-        mv.setGenre(movieDto.getGenre());
-        mv.setProducer(movieDto.getProducer());
-        mv.setDirector(movieDto.getDirector());
-
-		return movieRepo.save(mv);
+		return movieRepo.save(movieDto);
 	}
 
 	@Override
 	public Movie getById(Long id) {
-		return movieRepo.findById(id).get();
+		return movieRepo.getById(id);
 	}
 
 	@Override
-	public Movie updateMovie(Long id, MovieDto movieDto) {
+	public Movie updateMovie(Long id, Movie movieDto) {
 
 		Movie mv = new Movie();
         mv.setTitle(movieDto.getTitle());
@@ -56,12 +50,8 @@ public class MovieServiceImpl implements MovieService{
 
     @Override
     public String deleteMovie(Long movieId) {
-        if(movieRepo.findById(movieId) != null){
             movieRepo.deleteById(movieId);
             return "Book with id " + movieId + " successfully deleted";
-        }else{
-            return "Book with id " + movieId + " could not be found";
-        }
     }
 
 }
