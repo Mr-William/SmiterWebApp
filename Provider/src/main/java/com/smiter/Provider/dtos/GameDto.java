@@ -14,4 +14,5 @@ public class GameDto {
     String title;
     String genre;
     LocalDate datecompleted;
+    Float rating;
 }

@@ -65,16 +65,14 @@ public class WebAppTesting {
       driver.get("http://localhost:8081/");
       driver.findElement(By.id("bookbutton")).click();
       driver.findElement(By.id("addBookBtn")).click();
-      driver.findElement(By.id("bookAuthor")).click();
-      driver.findElement(By.id("bookAuthor")).sendKeys("Miguel de Cervantes");
-      driver.findElement(By.id("book_datecompleted")).click();
-      driver.findElement(By.id("book_datecompleted")).sendKeys("2023-01-01");
-      driver.findElement(By.id("bookAddBtn")).click();
-      driver.findElement(By.id("bookTitle")).click();
-      driver.findElement(By.id("bookTitle")).sendKeys("Don Quixote");
-      
-      assertTrue(driver.findElement(By.id("bookTitle")).getText() != null);
-      assertTrue(driver.findElement(By.id("bookAuthor")).getText() != null);
+      driver.findElement(By.id("author")).click();
+      driver.findElement(By.id("author")).sendKeys("Miguel de Cervantes");
+      driver.findElement(By.id("datecompleted")).click();
+      driver.findElement(By.id("datecompleted")).sendKeys("2023-01-01");
+      driver.findElement(By.id("title")).click();
+      driver.findElement(By.id("title")).sendKeys("Don Quixote");
+      assertTrue(driver.findElement(By.id("title")).getText() != null);
+      assertTrue(driver.findElement(By.id("author")).getText() != null);
       
       driver.findElement(By.id("bookAddBtn")).click();
     }
@@ -85,12 +83,12 @@ public class WebAppTesting {
         driver.get("http://localhost:8081/");
         driver.findElement(By.id("bookbutton")).click();
         driver.findElement(By.id("editBookBtn")).click();
-        driver.findElement(By.id("bookTitle")).clear();
-        driver.findElement(By.id("bookTitle")).click();
-        driver.findElement(By.id("bookTitle")).sendKeys("");
+        driver.findElement(By.id("title")).clear();
+        driver.findElement(By.id("title")).click();
+        driver.findElement(By.id("title")).sendKeys("Anna Karenina");
         
-        assertTrue(driver.findElement(By.id("bookTitle")).getText() != null);
-        assertTrue(driver.findElement(By.id("bookAuthor")).getText() != null);
+        assertTrue(driver.findElement(By.id("title")).getText() != null);
+        assertTrue(driver.findElement(By.id("author")).getText() != null);
         
         driver.findElement(By.id("submitUpdateBtn")).click();
     }
@@ -104,7 +102,6 @@ public class WebAppTesting {
         driver.findElement(By.id("deleteBtn")).click();
         assertThat(driver.switchTo().alert().getText(), is("Do you really want to delete this book?"));
         driver.switchTo().alert().dismiss();
-        driver.findElement(By.cssSelector(".overlay")).click();
         driver.findElement(By.id("editBookBtn")).click();
         driver.findElement(By.id("deleteBtn")).click();
         assertThat(driver.switchTo().alert().getText(), is("Do you really want to delete this book?"));
@@ -120,16 +117,12 @@ public class WebAppTesting {
         driver.get("http://localhost:8081/");
         driver.findElement(By.id("gamesbutton")).click();
         driver.findElement(By.id("addGameBtn")).click();
-        driver.findElement(By.id("game_datecompleted")).click();
-        driver.findElement(By.id("game_datecompleted")).sendKeys("2023-01-04");
-        
-        //Submitting with empty Title
-        driver.findElement(By.id("submitGameForm")).click();
-        
-        driver.findElement(By.id("gameTitle")).click();
-        driver.findElement(By.id("gameTitle")).sendKeys("Elden Ring");
+        driver.findElement(By.id("datecompleted")).click();
+        driver.findElement(By.id("datecompleted")).sendKeys("2023-01-04");
+        driver.findElement(By.id("title")).click();
+        driver.findElement(By.id("title")).sendKeys("Elden Ring");
 
-        assertFalse(driver.findElement(By.id("gameTitle")).getAttribute("value").isBlank());
+        assertFalse(driver.findElement(By.id("title")).getAttribute("value").isBlank());
         
         driver.findElement(By.id("submitGameForm")).click();
         
@@ -141,9 +134,9 @@ public class WebAppTesting {
         driver.get("http://localhost:8081/");
         driver.findElement(By.id("gamesbutton")).click();
         driver.findElement(By.id("editGameBtn")).click();
-        driver.findElement(By.id("gameGenre")).clear();
-        driver.findElement(By.id("gameGenre")).click();
-        driver.findElement(By.id("gameGenre")).sendKeys("Action Rpg");
+        driver.findElement(By.id("genre")).clear();
+        driver.findElement(By.id("genre")).click();
+        driver.findElement(By.id("genre")).sendKeys("Action Rpg");
         
         driver.findElement(By.id("updateBtn")).click();
     }
@@ -157,7 +150,6 @@ public class WebAppTesting {
         driver.findElement(By.id("deleteBtn")).click();
         assertThat(driver.switchTo().alert().getText(), is("Do you really want to delete this game?"));
         driver.switchTo().alert().dismiss();
-        driver.findElement(By.cssSelector(".overlay")).click();
         driver.findElement(By.id("editGameBtn")).click();
         driver.findElement(By.id("deleteBtn")).click();
         assertThat(driver.switchTo().alert().getText(), is("Do you really want to delete this game?"));
@@ -173,15 +165,12 @@ public class WebAppTesting {
         driver.get("http://localhost:8081/");
         driver.findElement(By.id("moviebutton")).click();
         driver.findElement(By.id("addMovieBtn")).click();
-
-        //Submitting with empty title
-        driver.findElement(By.id("submitNewMovieBtn")).click();
-        driver.findElement(By.id("movieTitle")).click();
-        driver.findElement(By.id("movieTitle")).sendKeys("Liar Liar");
-        driver.findElement(By.id("movieGenre")).click();
-        driver.findElement(By.id("movieGenre")).sendKeys("Comedy");
+        driver.findElement(By.id("title")).click();
+        driver.findElement(By.id("title")).sendKeys("Liar Liar");
+        driver.findElement(By.id("genre")).click();
+        driver.findElement(By.id("genre")).sendKeys("Comedy");
         
-        assertFalse(driver.findElement(By.id("movieTitle")).getAttribute("value").isBlank());
+        assertFalse(driver.findElement(By.id("title")).getAttribute("value").isBlank());
         
         driver.findElement(By.id("submitNewMovieBtn")).click();
     }
@@ -192,10 +181,10 @@ public class WebAppTesting {
         driver.get("http://localhost:8081/");
         driver.findElement(By.id("moviebutton")).click();
         driver.findElement(By.id("editMovieBtn")).click();
-        driver.findElement(By.id("movieDirector")).click();
-        driver.findElement(By.id("movieDirector")).clear();
+        driver.findElement(By.id("director")).click();
+        driver.findElement(By.id("director")).clear();
         
-        assertFalse(driver.findElement(By.id("movieTitle")).getAttribute("value").isBlank());
+        assertFalse(driver.findElement(By.id("title")).getAttribute("value").isBlank());
         
         driver.findElement(By.id("updateMovieBtn")).click();
     }
@@ -209,7 +198,6 @@ public class WebAppTesting {
         driver.findElement(By.id("deleteMovieBtn")).click();
         assertThat(driver.switchTo().alert().getText(), is("Do you really want to delete this movie?"));
         driver.switchTo().alert().dismiss();
-        driver.findElement(By.cssSelector(".overlay")).click();
         driver.findElement(By.id("editMovieBtn")).click();
         driver.findElement(By.id("deleteMovieBtn")).click();
         assertThat(driver.switchTo().alert().getText(), is("Do you really want to delete this movie?"));
@@ -225,16 +213,13 @@ public class WebAppTesting {
         driver.get("http://localhost:8081/");
         driver.findElement(By.id("musicbutton")).click();
         driver.findElement(By.id("addMusicBtn")).click();
-        driver.findElement(By.id("songArtist")).click();
-        driver.findElement(By.id("songArtist")).sendKeys("Five Finger Death Punch");
-
-        //Submitting with empty title
-        driver.findElement(By.id("submitNewMusicBtn")).click();
-        driver.findElement(By.id("songTitle")).click();
-        driver.findElement(By.id("songTitle")).sendKeys("Brighter Side of Grey");
+        driver.findElement(By.id("artist")).click();
+        driver.findElement(By.id("artist")).sendKeys("Five Finger Death Punch");
+        driver.findElement(By.id("title")).click();
+        driver.findElement(By.id("title")).sendKeys("Brighter Side of Grey");
         
-        assertFalse(driver.findElement(By.id("songTitle")).getAttribute("value").isBlank());
-        assertFalse(driver.findElement(By.id("songArtist")).getAttribute("value").isBlank());
+        assertFalse(driver.findElement(By.id("title")).getAttribute("value").isBlank());
+        assertFalse(driver.findElement(By.id("artist")).getAttribute("value").isBlank());
         
         driver.findElement(By.id("submitNewMusicBtn")).click();
     }
@@ -245,11 +230,11 @@ public class WebAppTesting {
         driver.get("http://localhost:8081/");
         driver.findElement(By.id("musicbutton")).click();
         driver.findElement(By.id("editMusicBtn")).click();
-        driver.findElement(By.id("songTitle")).clear();
-        driver.findElement(By.id("songTitle")).click();
-        driver.findElement(By.id("songTitle")).sendKeys("A Little Bit Off");
-        driver.findElement(By.id("albumTitle")).click();
-        driver.findElement(By.id("albumTitle")).sendKeys("F8");
+        driver.findElement(By.id("title")).clear();
+        driver.findElement(By.id("title")).click();
+        driver.findElement(By.id("title")).sendKeys("A Little Bit Off");
+        driver.findElement(By.id("album")).click();
+        driver.findElement(By.id("album")).sendKeys("F8");
                 
         driver.findElement(By.id("updateMusicBtn")).click();
     }
@@ -263,7 +248,6 @@ public class WebAppTesting {
         driver.findElement(By.id("deleteMusicBtn")).click();
         assertThat(driver.switchTo().alert().getText(), is("Do you really want to delete this music?"));
         driver.switchTo().alert().dismiss();
-        driver.findElement(By.cssSelector(".overlay")).click();
         driver.findElement(By.id("editMusicBtn")).click();
         driver.findElement(By.id("deleteMusicBtn")).click();
         assertThat(driver.switchTo().alert().getText(), is("Do you really want to delete this music?"));

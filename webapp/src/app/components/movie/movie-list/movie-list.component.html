@@ -1,0 +1,80 @@
+
+    <header class="header-banner">
+    </header>
+    
+    <section class="flex-sect" id="is95">
+      <div class="gjs-row" id="ig5f">
+        <div class="gjs-cell" id="ir4d">
+          <form name="movieForm" class="movie-modal hidden" id="movieModal">
+            <div class="flex">
+              <button class="btn-close">x</button>
+            </div>
+            <div>
+              <h3>Edit Movie Info</h3>
+              <p>Here you can modify the information stored about a movie.</p>
+            </div>
+            <input [(ngModel)]="movie.title" type="text" id="title" placeholder="Movie Title" required ng-minlength="3" name="title"/>
+            <input [(ngModel)]="movie.genre" type="text" id="genre" placeholder="Genre" name="genre"/>
+            <input [(ngModel)]="movie.director" type="text" id="director" placeholder="Director" name="director"/>
+            <input [(ngModel)]="movie.producer" type="text" id="producer" placeholder="Producer" name="producer"/>
+            <button (click)="submitUpdate()" id="updateMovieBtn" class="btn btn-success">Finished</button>
+            <button (click)="movieDelete()" id="deleteMovieBtn" class="btn btn-danger">Delete Movie</button>
+          </form>
+        
+          <div id="i6oy">
+            <u>
+              <b>
+                <span id="izxff">Movies</span>
+              </b>
+            </u>
+            <br/>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="overlay hidden" id="overlay"></div>
+    <section class="flex-sect" id="ipvi">
+     
+      <div class="container-width" id="iqesh">
+        <div class="gjs-cell" id="reviewlisting">
+          <table class="table table-primary table-striped">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Producer</th>
+                <th>Director</th>
+                <th>Rating</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let movie of movies">
+                <td><span>{{ movie.title }}</span></td>
+                <td><span>{{ movie.genre }}</span></td>
+                <td><span>{{ movie.producer }}</span></td>
+                <td><span>{{ movie.director }}</span></td>
+                <td><span>{{ movie.rating }}</span></td>
+                <td></td>
+                <td><button (click)="editDetails(movie.id)" id="editMovieBtn" class="btn btn-info">Edit Details</button></td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="gjs-cell" id="i5rij">
+          <a class="btn btn-success" id="addMovieBtn" href="/addmovie">Add New Movie</a>
+        </div>
+      </div>
+    </section>
+    <section class="am-sect" id="ipvi">
+      <div class="gjs-row" id="iqesh">
+        
+      </div>
+    </section>
+    <section id="i8k05" class="blk-sect">
+      <div class="container-width">
+        </div>
+        </section>

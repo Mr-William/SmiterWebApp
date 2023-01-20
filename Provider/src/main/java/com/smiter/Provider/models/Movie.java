@@ -31,4 +31,7 @@ public class Movie {
 
     @Column(name = "MOVIE_DIRECTOR")
     private String director;
+
+    @Column(name = "RATING")
+    private Float rating;
 }

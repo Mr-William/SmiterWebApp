@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.smiter.Provider.dtos.MusicDto;
 import com.smiter.Provider.models.Music;
 import com.smiter.Provider.repositories.MusicRepo;
 import com.smiter.Provider.services.MusicService;
@@ -33,8 +32,8 @@ public class MusicServiceImpl implements MusicService{
 	public Music updateMusic(Long id, Music tmp) {
 
 		Music ms = new Music();
-        ms.setSongTitle(tmp.getSongTitle());
-        ms.setAlbumTitle(tmp.getAlbumTitle());
+        ms.setTitle(tmp.getTitle());
+        ms.setAlbum(tmp.getAlbum());
         ms.setArtist(tmp.getArtist());
         ms.setGenre(tmp.getGenre());
         ms.setId(id);

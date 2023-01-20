@@ -21,14 +21,17 @@ public class Music {
     private Long id;
 
     @Column(name = "SONG_TITLE", nullable = false)
-    private String songTitle;
+    private String title;
 
     @Column(name = "ALBUM_TITLE")
-    private String albumTitle;
+    private String album;
 
     @Column(name = "SONG_ARTIST", nullable = false)
     private String artist;
 
     @Column(name = "SONG_GENRE")
     private String genre;
+
+    @Column(name = "RATING")
+    private Float rating;
 }

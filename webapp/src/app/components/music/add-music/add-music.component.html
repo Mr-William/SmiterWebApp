@@ -1,0 +1,75 @@
+
+    <header class="header-banner">
+    </header>
+    <section id="is95" class="flex-sect">
+      <div id="ig5f" class="gjs-row">
+        <div id="ir4d" class="gjs-cell">
+          <div id="i6oy">Add Music
+            <br/>
+          </div>
+        </div>
+      </div>
+        <form [formGroup]="musicForm" name="musicForm" id="musicForm"
+          class="form-horizontal">
+          <span class="border border-info"></span>
+          <input type="hidden" formControlName="id"/>
+          <div class="row">
+            <div class="form-group col-md 12">
+              <label class="col-md-2 control-label" for="title">Song Title: </label>
+              <div class="col-md-7">
+                <input type="text" formControlName="title"
+                  id="title" class="from-control input-sm"
+                  placeholder="Enter Song Title" required/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md 12">
+              <label class="col-md-2 control-label" for="artist">Artist: </label>
+              <div class="col-md-7">
+                <input type="text" formControlName="artist"
+                  id="artist" class="from-control input-sm"
+                  placeholder="Artist" required/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-2 control-label" for="music_albumTitle">Album:</label>
+                <div class="col-md-7">
+                    <input type="text" formControlName="album" 
+                    placeholder="Optional - Album" id="album"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md 12">
+              <label class="col-md-2 control-label" for="genre">Genre: </label>
+              <div class="col-md-7">
+                <input type="text" formControlName="genre"
+                  id="genre" class="from-control input-sm"
+                  placeholder="Optional - Genre"/>
+              </div>
+            </div>
+          </div>
+          <div class="gjs-row">
+            <div class="form-actions floatRight">
+              <button (click)="addMusic()" id="submitNewMusicBtn" class="btn btn-primary btn-sm"
+              [disabled]="!musicForm.valid">Add Music</button>
+              <button (click)="musicForm.reset()" id="resetMusicForm" class="btn btn-warning btn-sm"
+              [disabled]="enabled">Reset Form</button>
+            </div>
+          </div>
+        </form>
+    </section>
+    <section id="ipvi" class="am-sect">
+      
+      <div id="iqesh" class="gjs-row">
+      </div>
+    </section>
+    <section id="ik15a" class="blk-sect">
+      <div class="overlay hidden"></div>
+      <div class="music-modal hidden">
+        <button class="btn-close"></button>
+      </div>
+    </section>

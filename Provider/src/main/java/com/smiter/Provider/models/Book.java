@@ -33,4 +33,7 @@ public class Book {
 
     @Column(name = "DATE_COMPLETED")
     private LocalDate datecompleted;
+
+    @Column(name = "RATING")
+    private Float rating;
 }

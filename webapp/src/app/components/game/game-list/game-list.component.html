@@ -1,0 +1,77 @@
+
+    <header class="header-banner">
+    </header>
+    
+    <section class="flex-sect" id="is95">
+      <div class="gjs-row" id="ig5f">
+        <div class="gjs-cell" id="ir4d">
+          <form name="gameForm" class="game-modal hidden" id="gameModal">
+            <div class="flex">
+              <button class="btn-close">x</button>
+            </div>
+            <div>
+              <h3>Edit Game Info</h3>
+              <p>Here you can modify the information stored about a game.</p>
+            </div>
+            <input [(ngModel)]="game.title" type="text" id="title" placeholder="Game Title" required ng-minlength="3" name="title"/>
+            <input [(ngModel)]="game.genre" type="text" id="genre" placeholder="Genre" name="genre"/>
+            <input [(ngModel)]="game.datecompleted" type="date" id="datecompleted" placeholder="Last Played" name="datecompleted"/>
+            <button (click)="submitUpdate()" id="updateBtn" class="btn btn-success">Finished</button>
+            <button (click)="gameDelete()" id="deleteBtn" class="btn btn-danger">Delete Game</button>
+          </form>
+        
+          <div id="i6oy">
+            <u>
+              <b>
+                <span id="izxff">Games</span>
+              </b>
+            </u>
+            <br/>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="overlay hidden" id="overlay"></div>
+    <section class="flex-sect" id="ipvi">
+     
+      <div class="container-width" id="iqesh">
+        <div class="gjs-cell" id="reviewlisting">
+          <table class="table table-primary table-striped">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Date Last Played</th>
+                <th>Rating</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let game of games">
+                <td><span>{{ game.title }}</span></td>
+                <td><span>{{ game.genre }}</span></td>
+                <td><span>{{ game.datecompleted }}</span></td>
+                <td><span>{{ game.rating }}</span></td>
+                <td></td>
+                <td><button id="editGameBtn" (click)="editDetails(game.id)" class="btn btn-info">Edit Details</button></td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="gjs-cell" id="i5rij">
+          <a class="btn btn-success" id="addGameBtn" href="/addgame">Add New Game</a>
+        </div>
+      </div>
+    </section>
+    <section class="am-sect" id="ipvi">
+      <div class="gjs-row" id="iqesh">
+        
+      </div>
+    </section>
+    <section id="i8k05" class="blk-sect">
+      <div class="container-width">
+        </div>
+        </section>

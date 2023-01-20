@@ -1,0 +1,72 @@
+
+    <header class="header-banner">
+    </header>
+    <section id="is95" class="flex-sect">
+      <div id="ig5f" class="gjs-row">
+        <div id="ir4d" class="gjs-cell">
+          <div id="i6oy">Add a Movie
+            <br/>
+          </div>
+        </div>
+      </div>
+        <form [formGroup]="movieForm" name="movieForm" id="movieForm"
+          class="form-horizontal">
+          <span class="border border-info"></span>
+          <input type="hidden" formControlName="id"/>
+          <div class="row">
+            <div class="form-group col-md 12">
+              <label class="col-md-2 control-label" for="title">Movie Title: </label>
+              <div class="col-md-7">
+                <input type="text" formControlName="title"
+                  id="title" class="from-control input-sm"
+                  placeholder="Enter Movie Title" required/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md 12">
+              <label class="col-md-2 control-label" for="genre">Movie Genre: </label>
+              <div class="col-md-7">
+                <input type="text" formControlName="genre"
+                  id="genre" class="from-control input-sm"
+                  placeholder="Optional - Movie genre."/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-2 control-label" for="movie_director">Director:</label>
+                <div class="col-md-7">
+                    <input type="text" formControlName="director" placeholder="Optional - Director" id="movieDirector"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-2 control-label" for="movie_producer">Producer:</label>
+                <div class="col-md-7">
+                    <input type="text" formControlName="producer" placeholder="Optional - Producer" id="movieProducer"/>
+                </div>
+            </div>
+        </div>
+          <div class="gjs-row">
+            <div class="form-actions floatRight">
+              <button (click)="addMovie()" id="submitNewMovieBtn" class="btn btn-primary btn-sm"
+              [disabled]="!movieForm.valid">Add Movie</button>
+              <button (click)="movieForm.reset()" id="resetMovieFormBtn" class="btn btn-warning btn-sm"
+              [disabled]="enabled">Reset Form</button>
+            </div>
+          </div>
+        </form>
+    </section>
+    <section id="ipvi" class="am-sect">
+      
+      <div id="iqesh" class="gjs-row">
+      </div>
+    </section>
+    <section id="ik15a" class="blk-sect">
+      <div class="overlay hidden"></div>
+      <div class="movie-modal hidden">
+        <button class="btn-close"></button>
+      </div>
+    </section>

@@ -8,11 +8,8 @@ import static org.mockito.Mockito.atMost;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
-
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -36,23 +33,22 @@ public class MusicServiceTest extends AbstractTestNGSpringContextTests{
 
     private Music music1 = new Music();
     private Music music2 = new Music();
-    private Music music3 = new Music();
 
     @BeforeMethod
     public void init(){
 
         MockitoAnnotations.openMocks(this);
 
-        music1.setSongTitle("Brighter Side of Grey");
+        music1.setTitle("Brighter Side of Grey");
         music1.setGenre("Metal");
         music1.setId((long) 1);
-        music1.setAlbumTitle("F8");
+        music1.setAlbum("F8");
         music1.setArtist("Five Finger Death Punch");
 
-        music1.setSongTitle("A Little Bit Off");
+        music1.setTitle("A Little Bit Off");
         music1.setGenre("Metal");
         music1.setId((long) 2);
-        music1.setAlbumTitle("F8");
+        music1.setAlbum("F8");
         music1.setArtist("Five Finger Death Punch");
     }
 
@@ -112,7 +108,7 @@ public class MusicServiceTest extends AbstractTestNGSpringContextTests{
     @Test
     public void whenEmptyTitle_MusicNotSaved(){
 
-        music2.setSongTitle("");
+        music2.setTitle("");
         when(mockRepo.save(Mockito.any())).thenThrow(new NullPointerException());
 
         assertThrows(NullPointerException.class, () -> musicService.addMusic(music2));
@@ -121,7 +117,7 @@ public class MusicServiceTest extends AbstractTestNGSpringContextTests{
     @Test
     public void whenMusicUpdated_returnMusic(){
         Music tmp = music2;
-        tmp.setSongTitle(music1.getSongTitle());
+        tmp.setTitle(music1.getTitle());
         when(mockRepo.save(Mockito.any())).thenReturn(music2, tmp);
         when(mockRepo.getOne(Mockito.anyLong())).thenReturn(music2);
 
@@ -129,19 +125,19 @@ public class MusicServiceTest extends AbstractTestNGSpringContextTests{
         Music updated = musicService.updateMusic(saved.getId(), tmp);
 
         assertNotNull(updated);
-        assertEquals(updated.getSongTitle(), tmp.getSongTitle());
+        assertEquals(updated.getTitle(), tmp.getTitle());
     }
 
     @Test
     public void updatingEmptyTitle_ReturnsNull(){
         Music tmp = music2;
-        tmp.setSongTitle("");
+        tmp.setTitle("");
 
         when(mockRepo.save(Mockito.any())).thenThrow(new NullPointerException());
         when(mockRepo.getOne(Mockito.anyLong())).thenReturn(music1);
 
         Music saved = new Music();
-        saved.setSongTitle(tmp.getSongTitle());
+        saved.setTitle(tmp.getTitle());
         
         assertThrows(NullPointerException.class, () -> musicService.updateMusic(music1.getId(), saved));
     }
