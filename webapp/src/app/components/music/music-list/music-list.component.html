@@ -56,7 +56,7 @@
                 <td><span>{{ music.album }}</span></td>
                 <td><span>{{ music.artist }}</span></td>
                 <td><span>{{ music.genre }}</span></td>
-                <td><span>{{ music.rating }}</span></td>
+                <td><span><ngb-rating class="star" [rate]="music.rating" [max]="5" [readonly]="true"></ngb-rating></span></td>
                 <td></td>
                 <td><button id="editMusicBtn" (click)="editDetails(music.id)" class="btn btn-info" id="editMusicBtn">Edit Details</button></td>
 

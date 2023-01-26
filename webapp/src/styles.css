@@ -848,3 +848,15 @@
   .hidden {
     display: none;
   }
+
+  .star{
+    
+    position: relative;
+    display: inline-block;
+    font-size: 22pt;
+    padding-right: 0.1rem;
+    color: orange;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }

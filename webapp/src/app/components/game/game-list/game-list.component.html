@@ -53,7 +53,7 @@
                 <td><span>{{ game.title }}</span></td>
                 <td><span>{{ game.genre }}</span></td>
                 <td><span>{{ game.datecompleted }}</span></td>
-                <td><span>{{ game.rating }}</span></td>
+                <td><span><ngb-rating class="star" [rate]="game.rating" [max]="5" [readonly]="true"></ngb-rating></span></td>
                 <td></td>
                 <td><button id="editGameBtn" (click)="editDetails(game.id)" class="btn btn-info">Edit Details</button></td>
 

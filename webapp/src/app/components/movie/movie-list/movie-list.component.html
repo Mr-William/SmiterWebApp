@@ -56,7 +56,7 @@
                 <td><span>{{ movie.genre }}</span></td>
                 <td><span>{{ movie.producer }}</span></td>
                 <td><span>{{ movie.director }}</span></td>
-                <td><span>{{ movie.rating }}</span></td>
+                <td><span><ngb-rating class="star" [rate]="movie.rating" [max]="5" [readonly]="true"></ngb-rating></span></td>
                 <td></td>
                 <td><button (click)="editDetails(movie.id)" id="editMovieBtn" class="btn btn-info">Edit Details</button></td>
 

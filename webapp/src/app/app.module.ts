@@ -13,7 +13,8 @@ import { AddMovieComponent } from './components/movie/add-movie/add-movie.compon
 import { MovieListComponent } from './components/movie/movie-list/movie-list.component';
 import { AddMusicComponent } from './components/music/add-music/add-music.component';
 import { MusicListComponent } from './components/music/music-list/music-list.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbRating } from '@ng-bootstrap/ng-bootstrap';
+import { NgIf } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -35,7 +36,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         HttpClientModule,
         NgbModule,
         FormsModule, 
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        NgbRating,
+        NgIf
     ]
 })
 export class AppModule { }
