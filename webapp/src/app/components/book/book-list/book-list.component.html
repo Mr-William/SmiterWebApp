@@ -1,0 +1,79 @@
+
+    <header class="header-banner">
+    </header>
+    
+    <section class="flex-sect" id="is95">
+      <div class="gjs-row" id="ig5f">
+        <div class="gjs-cell" id="ir4d">
+          <form name="bookForm modal-dialog-centered" class="book-modal hidden" id="bookModal">
+            <div class="flex">
+              <button class="btn-close">x</button>
+            </div>
+            <div>
+              <h3>Edit Book Info</h3>
+              <p>Here you can modify the information stored about a book.</p>
+            </div>
+            <input [(ngModel)]="book.title" type="text" id="title" placeholder="Book Title" required ng-minlength="3" name="title"  />
+            <input [(ngModel)]="book.author" type="text" id="author" placeholder="Author" required ng-minlength="3" name="author"/>
+            <input [(ngModel)]="book.genre" type="text" id="genre" placeholder="Genre" name="genre"/>
+            <button (click)="submitUpdate()" id="submitUpdateBtn" class="btn btn-success">Finished</button>
+            <button (click)="bookDelete()" id="deleteBtn" class="btn btn-danger">Delete Book</button>
+          </form>
+        
+          <div id="i6oy">
+            <u>
+              <b>
+                <span id="izxff">Books</span>
+              </b>
+            </u>
+            <br/>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="overlay hidden" id="overlay" (click)="closeModal()"></div>
+    <section class="flex-sect" id="ipvi">
+     
+      <div class="container-width" id="iqesh">
+        <div class="gjs-cell" id="reviewlisting">
+          <table class="table table-primary table-striped">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Date Completed</th>
+                <th>Rating</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let book of books">
+                <td><span>{{ book.title }}</span></td>
+                <td><span>{{ book.author }}</span></td>
+                <td><span>{{ book.genre }}</span></td>
+                <td><span>{{ book.datecompleted }}</span></td>
+                <td><span><ngb-rating class="star" [rate]="book.rating" [max]="5" [readonly]="true"></ngb-rating></span></td>
+                <td></td>
+                <td><button class="btn btn-info" (click)="editDetails(book.id)" id="editBookBtn">Edit Details</button></td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="gjs-cell" id="i5rij">
+          <a class="btn btn-success" id="addBookBtn" href="/addbook">Add New Book</a>
+        </div>
+      </div>
+    </section>
+    <section class="am-sect" id="ipvi">
+      <div class="gjs-row" id="iqesh">
+        
+      </div>
+    </section>
+    <section id="i8k05" class="blk-sect">
+      <div class="container-width">
+        </div>
+        </section>

@@ -3,7 +3,6 @@ package com.smiter.Provider.services.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.smiter.Provider.dtos.BookDto;
 import com.smiter.Provider.models.Book;
 import com.smiter.Provider.repositories.BookRepo;
 import com.smiter.Provider.services.BookService;

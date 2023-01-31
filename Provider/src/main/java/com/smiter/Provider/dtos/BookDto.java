@@ -16,4 +16,5 @@ public class BookDto {
     String author;
     String genre;
     LocalDate datecompleted;
+    Float rating;
 }

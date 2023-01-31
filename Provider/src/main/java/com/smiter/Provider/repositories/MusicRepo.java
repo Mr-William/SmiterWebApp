@@ -8,6 +8,6 @@ import com.smiter.Provider.models.Music;
 
 public interface MusicRepo extends JpaRepository<Music, Long>{
  
-    List<Music> findBySongTitle(String songTitle);
-    List<Music> findByAlbumTitle(String albumTitle);
+    List<Music> findByTitle(String title);
+    List<Music> findByAlbum(String album);
 }

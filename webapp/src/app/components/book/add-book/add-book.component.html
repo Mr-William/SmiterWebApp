@@ -1,0 +1,76 @@
+
+    <header class="header-banner">
+    </header>
+    <section id="is95" class="flex-sect">
+      <div id="ig5f" class="gjs-row">
+        <div id="ir4d" class="gjs-cell">
+          <div id="i6oy">Add a Book
+            <br/>
+          </div>
+        </div>
+      </div>
+        <div class="row">
+        </div>
+        <form [formGroup]="bookForm"
+          class="form-horizontal">
+          <span class="border border-info"></span>
+          <input type="hidden" formControlName="id"/>
+          <div class="row">
+            <div class="form-group col-md 12">
+              <label class="col-md-2 control-label" for="title">Book Title: </label>
+              <div class="col-md-7">
+                <input type="text" 
+                  id="title" class="from-control input-sm"
+                  placeholder="Enter Book Title" required formControlName="title"/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md 12">
+              <label class="col-md-2 control-label" for="author">Book Author: </label>
+              <div class="col-md-7">
+                <input type="text" 
+                  id="author" class="from-control input-sm"
+                  placeholder="Enter Book Author" required formControlName="author"/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md 12">
+              <label class="col-md-2 control-label" for="genre">Book Genre: </label>
+              <div class="col-md-7">
+                <input type="text"
+                  id="genre" class="from-control input-sm"
+                  placeholder="Optional - Book genre." formControlName="genre"/>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-2 control-label" for="book_datecompleted">Date You Completed:</label>
+                <div class="col-md-7">
+                    <input type="text" id="datecompleted" formControlName="datecompleted"/>
+                </div>
+            </div>
+        </div>
+          <div class="gjs-row">
+            <div class="form-actions floatRight">
+              <button (click)="addBook()" id="bookAddBtn"class="btn btn-primary btn-sm"
+              [disabled]="!bookForm.valid">Add Book</button>
+              <button (click)="bookForm.reset()" id="formResetBtn" class="btn btn-warning btn-sm"
+              [disabled]="enabled">Reset Form</button>
+            </div>
+          </div>
+        </form>
+    </section>
+    <section id="ipvi" class="am-sect">
+      
+      <div id="iqesh" class="gjs-row">
+      </div>
+    </section>
+    <section id="ik15a" class="blk-sect">
+      <div class="overlay hidden"></div>
+      <div class="book-modal hidden">
+        <button class="btn-close"></button>
+      </div>
+    </section>

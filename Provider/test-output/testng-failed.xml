@@ -6,7 +6,7 @@
       <class name="testpackage.webapptests.WebAppTesting">
         <methods>
           <include name="startTest"/>
-          <include name="editGame"/>
+          <include name="addBook"/>
           <include name="endTest"/>
         </methods>
       </class> <!-- testpackage.webapptests.WebAppTesting -->

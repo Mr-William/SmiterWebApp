@@ -1,0 +1,80 @@
+
+    <header class="header-banner">
+    </header>
+    
+    <section class="flex-sect" id="is95">
+      <div class="gjs-row" id="ig5f">
+        <div class="gjs-cell" id="ir4d">
+          <form name="musicForm" class="music-modal hidden" id="musicModal">
+            <div class="flex">
+              <button class="btn-close">x</button>
+            </div>
+            <div>
+              <h3>Edit Music Info</h3>
+              <p>Here you can modify the information stored about a music.</p>
+            </div>
+            <input [(ngModel)]="music.title" type="text" id="title" placeholder="Song Title" required name="title"/>
+            <input [(ngModel)]="music.album" type="text" id="album" placeholder="Album" name="album"/>
+            <input [(ngModel)]="music.artist" type="text" id="artist" placeholder="Artist" required name="artist"/>
+            <input [(ngModel)]="music.genre" type="text" id="genre" placeholder="Genre" name="genre"/>
+            <button (click)="submitUpdate()" id="updateMusicBtn" class="btn btn-success">Finished</button>
+            <button (click)="musicDelete()" id="deleteMusicBtn" class="btn btn-danger">Delete Music</button>
+          </form>
+        
+          <div id="i6oy">
+            <u>
+              <b>
+                <span id="izxff">Music</span>
+              </b>
+            </u>
+            <br/>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <div class="overlay hidden" id="overlay"></div>
+    <section class="flex-sect" id="ipvi">
+     
+      <div class="container-width" id="iqesh">
+        <div class="gjs-cell" id="reviewlisting">
+          <table class="table table-primary table-striped">
+            <thead>
+              <tr>
+                <th>Song Title</th>
+                <th>Album</th>
+                <th>Artist</th>
+                <th>Genre</th>
+                <th>Rating</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let music of musics">
+                <td><span>{{ music.title }}</span></td>
+                <td><span>{{ music.album }}</span></td>
+                <td><span>{{ music.artist }}</span></td>
+                <td><span>{{ music.genre }}</span></td>
+                <td><span><ngb-rating class="star" [rate]="music.rating" [max]="5" [readonly]="true"></ngb-rating></span></td>
+                <td></td>
+                <td><button id="editMusicBtn" (click)="editDetails(music.id)" class="btn btn-info" id="editMusicBtn">Edit Details</button></td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="gjs-cell" id="i5rij">
+          <a class="btn btn-success" id="addMusicBtn" href="/addmusic">Add New Music</a>
+        </div>
+      </div>
+    </section>
+    <section class="am-sect" id="ipvi">
+      <div class="gjs-row" id="iqesh">
+        
+      </div>
+    </section>
+    <section id="i8k05" class="blk-sect">
+      <div class="container-width">
+        </div>
+        </section>

@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<div class="container-fluid">
+  <nav id="Smiter-navbar" class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="btn btn-info" [routerLink]="['/home']" id="homebutton">Home</a>
+    <a class="btn btn-info" [routerLink]="['/books']" id="bookbutton">Books</a>
+    <a class="btn btn-info" [routerLink]="['/games']" id="gamesbutton">Games</a>
+    <a class="btn btn-info" [routerLink]="['/movies']" id="moviebutton">Movies</a>
+    <a class="btn btn-info" [routerLink]="['/music']" id="musicbutton">Music</a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

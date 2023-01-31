@@ -10,8 +10,9 @@ import lombok.Setter;
 public class MusicDto {
     
     Long id;
-    String songTitle;
-    String albumTitle;
+    String title;
+    String album;
     String artist;
     String genre;
+    Float rating;
 }

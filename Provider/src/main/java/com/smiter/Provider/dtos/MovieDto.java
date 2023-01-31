@@ -14,4 +14,5 @@ public class MovieDto {
     String genre;
     String producer;
     String director;
+    Float rating;
 }
